@@ -40,7 +40,7 @@ void egzaminoRezultatasRandom(Studentas &A)
 {
     static std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(1,10);
-    A.rez = dist(rng);
+    A.setRez(dist(rng));
 }
 
 int namuDarbuRezultataiIvestisRandom()

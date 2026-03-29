@@ -53,7 +53,7 @@ void failoGeneravimas(int studentuKiekis, int ndKiekis)
         for(int j = 0; j < ndKiekis; j++){
             setw(std::to_string(A.getNd().at(j)), 10, out);
         }
-        out += std::to_string(A.rez)+"\n";
+        out += std::to_string(A.getRez())+"\n";
     }
     std::string failoPavadinimas = std::string("studentai") + std::to_string(studentuKiekis) + ".txt";
     std::ofstream fout(failoPavadinimas);

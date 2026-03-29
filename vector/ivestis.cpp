@@ -108,7 +108,7 @@ void namuDarbuRezultatuIvestis(Studentas &A)
 void egzaminoRezultatoIvestis(Studentas &A)
 {
     int balas = gautiSkaiciu("Įveskite egzamino rezultatą (1-10): ", 1, 10);
-    A.rez = balas;
+    A.setRez(balas);
 }
 
 int gautiSkaiciu(const std::string &pranešimas, int min, int max, bool galiButiTuscia /* = false */)

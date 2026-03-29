@@ -3,8 +3,7 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
     Konteineris studentai;
     if constexpr(requires(Konteineris konteineris){konteineris.reserve(0);})
         studentai.reserve(rezervas);
-    std::string eil;
-    std::string t="";
+    std::string eil, t;
 
     std::ifstream open_f(failoPavadinimas);
     if (!open_f.is_open()) throw std::runtime_error("Klaida: failas \"" + failoPavadinimas + "\" nerastas.");
@@ -31,8 +30,9 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
             if(!(open_f >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
             studentas.addNd(paz);
         }
-        if(!(open_f >> studentas.rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
-
+        int rez;
+        if(!(open_f >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
+            studentas.setRez(rez);
         studentai.push_back(std::move(studentas));
     }
 
