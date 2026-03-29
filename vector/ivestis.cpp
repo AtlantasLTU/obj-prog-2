@@ -92,14 +92,14 @@ bool studentoVardoPavardesIvestis(Studentas &A, const std::string& eilute)
 void namuDarbuRezultatuIvestis(Studentas &A)
 {
     std::cout << "Įveskite " << maxNdKiekis << " namų darbų rezultatų." << std::endl;
-    while (A.nd.size()<maxNdKiekis)
+    while (A.getNd().size()<maxNdKiekis)
     {
         int balas = gautiSkaiciu("Įveskite namų darbų rezultatą nuo 1 iki 10 (ENTER - baigti): ", 1, 10, true);
         if (balas == -1) break; 
-        A.nd.push_back(balas);
+        A.addNd(balas);
     }
 
-    if(A.nd.size()==maxNdKiekis)
+    if(A.getNd().size()==maxNdKiekis)
     {
         std::cout << "Įvestas didžiausias namų darbų rezultatų kiekis" << std::endl;
     }

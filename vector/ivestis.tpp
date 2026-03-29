@@ -29,7 +29,7 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
 
         for(int i = 0; i < ndKiekis; i++){
             if(!(open_f >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
-            studentas.nd.push_back(paz);
+            studentas.addNd(paz);
         }
         if(!(open_f >> studentas.rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
 

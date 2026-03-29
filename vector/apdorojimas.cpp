@@ -51,7 +51,7 @@ void failoGeneravimas(int studentuKiekis, int ndKiekis)
         setw(A.getVardas(), 20, out);
         setw(A.getPavarde(), 20, out);
         for(int j = 0; j < ndKiekis; j++){
-            setw(std::to_string(A.nd.at(j)), 10, out);
+            setw(std::to_string(A.getNd().at(j)), 10, out);
         }
         out += std::to_string(A.rez)+"\n";
     }

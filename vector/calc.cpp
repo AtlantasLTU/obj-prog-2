@@ -4,9 +4,9 @@
 #include <iostream>
 
 double galutinisVid(const Studentas &A){
-    if(A.nd.empty()) return 0.6*A.rez;
+    if(A.getNd().empty()) return 0.6*A.rez;
 
-    int sum = std::accumulate(A.nd.begin(), A.nd.end(), 0);
+    int sum = std::accumulate(A.getNd().begin(), A.getNd().end(), 0);
 
     double vid = (double)sum / maxNdKiekis;
     return 0.4 * vid + 0.6 * A.rez;
@@ -14,24 +14,24 @@ double galutinisVid(const Studentas &A){
 
 
 double galutinisMed(/* const  */Studentas &A){ // uzkomentuotas kodas toks pat kaip ir F sitos funkcijos versijoje, kuri aprasyta zemiau
-    if(A.nd.empty()) return 0.6*A.rez;
+    if(A.getNd().empty()) return 0.6*A.rez;
 
     /* std::vector<int> nd = A.nd; */
-    A.nd.resize(maxNdKiekis, 0);
-    std::sort(A.nd.begin(), A.nd.end());
+    A.getNd().resize(maxNdKiekis, 0);
+    std::sort(A.getNd().begin(), A.getNd().end());
 
     double med =
         (maxNdKiekis % 2 == 0) // jei lyginis, tai dvieju viduriniu nd vektoriaus nariu mediana paskaiciuoja
-        ? (A.nd.at(maxNdKiekis/2) + A.nd.at(maxNdKiekis/2 - 1)) / 2.0
-        : A.nd.at(maxNdKiekis/2);
+        ? (A.getNd().at(maxNdKiekis/2) + A.getNd().at(maxNdKiekis/2 - 1)) / 2.0
+        : A.getNd().at(maxNdKiekis/2);
 
     return 0.4 * med + 0.6 * A.rez;
 }
 
 double galutinisVidF(Studentas &A, int ndKiekis){ // perduodam ndKieki, jis naudojamas kaip maxNDKiekis, tik cia jis gautas is failo.
-    if(A.nd.empty()) return 0.6*A.rez;
+    if(A.getNd().empty()) return 0.6*A.rez;
 
-    int sum = std::accumulate(A.nd.begin(), A.nd.end(), 0);
+    int sum = std::accumulate(A.getNd().begin(), A.getNd().end(), 0);
     
     double vid = (double)sum / ndKiekis;
     return 0.4 * vid + 0.6 * A.rez;
@@ -39,19 +39,19 @@ double galutinisVidF(Studentas &A, int ndKiekis){ // perduodam ndKieki, jis naud
 
 
 double galutinisMedF(/* const atkomentuoti, jei griztam prie nd vektoriaus kopijavimo */Studentas &A, int ndKiekis){
-    if(A.nd.empty()) return 0.6*A.rez;
+    if(A.getNd().empty()) return 0.6*A.rez;
     //geriau kopijuot, bet kadangi veliau nenaudosim A.nd vektoriaus niekur, tai kopija nebutina
     /* std::vector<int> nd = A.nd;
     while(nd.size() < maxNdKiekis){
         nd.push_back(0);
     } */
-    A.nd.resize(ndKiekis, 0);
-    std::sort(A.nd.begin(), A.nd.end());
+    A.getNd().resize(ndKiekis, 0);
+    std::sort(A.getNd().begin(), A.getNd().end());
 
     double med =
         (ndKiekis % 2 == 0) // jei lyginis, tai dvieju viduriniu nd vektoriaus nariu mediana paskaiciuoja
-        ? (A.nd.at(ndKiekis/2) + A.nd.at(ndKiekis/2 - 1)) / 2.0
-        : A.nd.at(ndKiekis/2);
+        ? (A.getNd().at(ndKiekis/2) + A.getNd().at(ndKiekis/2 - 1)) / 2.0
+        : A.getNd().at(ndKiekis/2);
 
     return 0.4 * med + 0.6 * A.rez;
 }

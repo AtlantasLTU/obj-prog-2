@@ -60,7 +60,7 @@ void namuDarbuRezultataiRandom(Studentas &A, int ndKiekis)
     static std::mt19937 rng(std::random_device{}()); // static - sukuriama karta ir kad nebutu per naujo kuriamas rng bei seed'inamas
     std::uniform_int_distribution<int> dist(1,10); // skaicius nuo 1 iki 10 isskirstymas, tai jei pvz sugeneruota random skaiciu 12312581 idedame i dist, ji priskiria kazkuriam skaiciui nuo 1 iki 10 imtinai
     for(int i = 0; i < ndKiekis; i++){
-        A.nd.push_back(dist(rng));
+        A.addNd(dist(rng));
     }
 }
 
