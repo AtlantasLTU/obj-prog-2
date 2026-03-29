@@ -19,12 +19,12 @@ void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &fai
         if (medianos)
         {
             setw("x.xx", 19, out);
-            out += std::format("{:.2f}", X.galutinis);
+            out += std::format("{:.2f}", X.getGalutinis());
             out += '\n';
         }
         else
         {
-            setw(std::format("{:.2f}", X.galutinis), 19, out);
+            setw(std::format("{:.2f}", X.getGalutinis()), 19, out);
             out += "y.yy\n";
         }
     }

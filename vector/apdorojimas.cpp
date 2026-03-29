@@ -7,13 +7,13 @@ void skaiciavimas(std::vector<Studentas> &A, bool medianos, int ndKiekis){
     if(medianos)
     {
         for(Studentas &X : A){
-            X.galutinis = galutinisMedF(X, ndKiekis);
+            X.setGalutinis(galutinisMedF(X, ndKiekis));
         }
     }
     else
     {
         for(Studentas &X : A){
-            X.galutinis = galutinisVidF(X, ndKiekis);
+            X.setGalutinis(galutinisVidF(X, ndKiekis));
         }
     }
 }
@@ -22,13 +22,13 @@ void skaiciavimas(std::vector<Studentas> &A, bool medianos){
     if(medianos)
     {
         for(Studentas &X : A){
-            X.galutinis = galutinisMed(X);
+            X.setGalutinis(galutinisMed(X));
         }
     }
     else
     {
         for(Studentas &X : A){
-            X.galutinis = galutinisVid(X);
+            X.setGalutinis(galutinisVid(X));
         }
     }
 }
