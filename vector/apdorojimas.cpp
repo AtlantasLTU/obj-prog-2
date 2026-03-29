@@ -48,8 +48,8 @@ void failoGeneravimas(int studentuKiekis, int ndKiekis)
         gen_map(A);
         namuDarbuRezultataiRandom(A, ndKiekis);
         egzaminoRezultatasRandom(A);
-        setw(A.vardas, 20, out);
-        setw(A.pavarde, 20, out);
+        setw(A.getVardas(), 20, out);
+        setw(A.getPavarde(), 20, out);
         for(int j = 0; j < ndKiekis; j++){
             setw(std::to_string(A.nd.at(j)), 10, out);
         }

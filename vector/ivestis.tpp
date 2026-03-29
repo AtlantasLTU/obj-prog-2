@@ -22,8 +22,8 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
     
     while (open_f >> vardas >> pavarde) {
         Studentas studentas;
-        studentas.vardas = std::move(vardas); //std::move - vardas istrinamas is atminties, t.y. string vardas tampa "", ir tai kas buvo jame dabar priklauso studento strukturos vardui. Paprastai tariant: nedaroma kopija, o vardas priskiriamas studentas.vardas su std::move; taip susitaupo laiko
-        studentas.pavarde = std::move(pavarde);
+        studentas.setVardas(std::move(vardas)); //std::move - vardas istrinamas is atminties, t.y. string vardas tampa "", ir tai kas buvo jame dabar priklauso studento strukturos vardui. Paprastai tariant: nedaroma kopija, o vardas priskiriamas studentas.vardas su std::move; taip susitaupo laiko
+        studentas.setPavarde(std::move(pavarde));
         // uzkomentuotas kodas parodo, kad po std::move dingsta string vardas esantis string, nes jis perkeltas i studentas.vardas
         // std::cout << "vardas: " << vardas << "\n";
 

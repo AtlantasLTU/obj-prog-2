@@ -84,8 +84,8 @@ bool studentoVardoPavardesIvestis(Studentas &A, const std::string& eilute)
         return false;
     }
     // Jei viskas gerai — saugom
-    A.vardas = vardas;
-    A.pavarde = pavarde;
+    A.setVardas(vardas);
+    A.setPavarde(pavarde);
     return true;
 }
 

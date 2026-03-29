@@ -40,10 +40,10 @@ void rusiavimasPagal(Konteineris &studentai, T lambdaFunkcija, bool didejanciai 
 template<class Konteineris>
 void rusiavimasSkirstymas(Konteineris &studentai, int rPasirinkimas){
     switch(rPasirinkimas){
-        case 1: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.vardas;}); break;
-        case 2: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.vardas;}, false); break;
-        case 3: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.pavarde;}); break;
-        case 4: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.pavarde;}, false); break;
+        case 1: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getVardas();}); break;
+        case 2: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getVardas();}, false); break;
+        case 3: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getPavarde();}); break;
+        case 4: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getPavarde();}, false); break;
         case 5: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.galutinis;}); break;
         case 6: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.galutinis;}, false); break;
         default:

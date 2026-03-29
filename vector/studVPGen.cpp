@@ -64,6 +64,6 @@ void gen_map(Studentas &A){
       pavarde=pavardes_m[100+dist(mt)];
       break;  
   };
-  A.vardas=vardas;
-  A.pavarde=pavarde;
+  A.setVardas(vardas);
+  A.setPavarde(pavarde);
 }

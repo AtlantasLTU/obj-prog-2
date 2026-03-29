@@ -11,11 +11,11 @@ void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &fai
     out += std::string(75, '-') + "\n";
     for(const Studentas &X : A)
     {
-        int vardoPlotis = 20 + lietuviskosRaides(X.vardas);
-        int pavardesPlotis = 20 + lietuviskosRaides(X.pavarde);
+        int vardoPlotis = 20 + lietuviskosRaides(X.getVardas());
+        int pavardesPlotis = 20 + lietuviskosRaides(X.getPavarde());
         
-        setw(X.vardas, vardoPlotis, out);
-        setw(X.pavarde, pavardesPlotis, out);
+        setw(X.getVardas(), vardoPlotis, out);
+        setw(X.getPavarde(), pavardesPlotis, out);
         if (medianos)
         {
             setw("x.xx", 19, out);
