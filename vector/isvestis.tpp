@@ -1,7 +1,7 @@
 #include "isvestis.h"
 
 template<class Konteineris>
-void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &failoPavadinimas = "rezultatai.txt")
+void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &failoPavadinimas = "rezultatai.txt", int ndKiekis = 0)
 {
     std::string out;
 
@@ -19,12 +19,12 @@ void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &fai
         if (medianos)
         {
             setw("x.xx", 19, out);
-            out += std::format("{:.2f}", X.getGalutinis());
+            out += std::format("{:.2f}", X.galutinis(medianos, ndKiekis));
             out += '\n';
         }
         else
         {
-            setw(std::format("{:.2f}", X.getGalutinis()), 19, out);
+            setw(std::format("{:.2f}", X.galutinis(medianos, ndKiekis)), 19, out);
             out += "y.yy\n";
         }
     }

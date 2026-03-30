@@ -16,15 +16,15 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
     double isvedimoTrukme2 = 0;
     ndKiekis = 0;
     Konteineris studentai = skaitymasIsFailo<Konteineris>(failoPavadinimas, ndKiekis, rezervas); // nuskaitymas
-    skaiciavimas<Konteineris>(studentai, medianos, ndKiekis); // rezultatu apsiskaiciavimas pries rikiavima
-    rusiavimasSkirstymas(studentai, 5); // rusiavimas didejanciai
+/*     skaiciavimas<Konteineris>(studentai, medianos, ndKiekis);  */// rezultatu apsiskaiciavimas pries rikiavima
+    rusiavimasSkirstymas(studentai, 5, medianos, ndKiekis); // rusiavimas didejanciai
     Konteineris vargsiukai;
     Konteineris galvociai;
     if constexpr(requires(Konteineris konteineris){konteineris.reserve(0);}){
         galvociai.reserve(studentai.size());
         vargsiukai.reserve(studentai.size());
     }
-    skirstymoPasirinkimas(sPasirinkimas, studentai, galvociai, vargsiukai);
+    skirstymoPasirinkimas(sPasirinkimas, studentai, galvociai, vargsiukai, medianos, ndKiekis);
     /*     isvestis(galvociai, medianos, true, "galvociai.txt");
         isvestis(vargsiukai, medianos, true, "vargsiukai.txt"); */
     for(int i = 0; i < tPasirinkimas; i++)
@@ -33,11 +33,11 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
         Timer t;
         Konteineris studentai = skaitymasIsFailo<Konteineris>(failoPavadinimas, ndKiekis, rezervas); // nuskaitymas
         skaitymoTrukme += t.elapsed(); // Skirtumas (s)
-        t.reset();
+/*         t.reset();
         skaiciavimas<Konteineris>(studentai, medianos, ndKiekis); // rezultatu apsiskaiciavimas pries rikiavima
-        skaiciavimoTrukme += t.elapsed();
+        skaiciavimoTrukme += t.elapsed(); */
         t.reset();
-        rusiavimasSkirstymas(studentai, 5); // rusiavimas didejanciai
+        rusiavimasSkirstymas(studentai, 5, medianos, ndKiekis); // rusiavimas didejanciai
         rusiavimoTrukme += t.elapsed();
         t.reset();
         Konteineris vargsiukai;
@@ -46,7 +46,7 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
             galvociai.reserve(studentai.size());
             vargsiukai.reserve(studentai.size());
         }
-        skirstymoPasirinkimas(sPasirinkimas, studentai, galvociai, vargsiukai);
+        skirstymoPasirinkimas(sPasirinkimas, studentai, galvociai, vargsiukai, medianos, ndKiekis);
         skirstymoTrukme += t.elapsed();
 /*         t.reset();
        isvestis(studentai, medianos, true, "rezultatai.txt");
@@ -65,28 +65,28 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
 }
 
 template <class Konteineris>
-void skirstymoPasirinkimas(int sPasirinkimas, Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai)
+void skirstymoPasirinkimas(int sPasirinkimas, Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0)
 {
     switch (sPasirinkimas)
     {
         case 0:
         {
-            skirstymas(studentai, galvociai, vargsiukai);
+            skirstymas(studentai, galvociai, vargsiukai, medianos, ndKiekis);
             break;
         }
         case 1:
         {
-            skirstymasStrat1(studentai, galvociai, vargsiukai);
+            skirstymasStrat1(studentai, galvociai, vargsiukai, medianos, ndKiekis);
             break;
         }
         case 2:
         {
-            skirstymasStrat2(studentai, vargsiukai);
+            skirstymasStrat2(studentai, vargsiukai, medianos, ndKiekis);
             break;
         }
         case 3:
         {
-            skirstymasStrat3(studentai, vargsiukai);
+            skirstymasStrat3(studentai, vargsiukai, medianos, ndKiekis);
             break;
         }
         default:

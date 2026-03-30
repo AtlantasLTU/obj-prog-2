@@ -5,7 +5,7 @@
 #include "studentas.h"
 #include "calc.h"
 
-void skaiciavimas(std::vector<Studentas> &A, bool medianos);
+/* void skaiciavimas(std::vector<Studentas> &A, bool medianos); */
 
 void failoGeneravimas(int studentuKiekis, int ndKiekis);
 

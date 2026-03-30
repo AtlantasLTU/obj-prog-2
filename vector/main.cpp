@@ -31,21 +31,21 @@ int main()
                 case 1: // rankinis ivedimas
                 {
                     std::vector<Studentas> studentai = ivestiStudentus();
-                    skaiciavimas(studentai, medianos);
+/*                     skaiciavimas(studentai, medianos); */
                     isvestis(studentai, medianos, failas);
                     break;
                 }
                 case 2: // tik pazymiu generavimas.
                 {
                     std::vector<Studentas> studentai = ivestiStudentusRandom(pasirinkimas);
-                    skaiciavimas(studentai, medianos);
+/*                     skaiciavimas(studentai, medianos); */
                     isvestis(studentai, medianos, failas);
                     break;
                 }
                 case 3: // studentu ir pazymiu generavimas;
                 {
                     std::vector<Studentas> studentai = ivestiStudentusRandom(pasirinkimas);
-                    skaiciavimas(studentai, medianos);
+/*                     skaiciavimas(studentai, medianos); */
                     isvestis(studentai, medianos, failas);
                     break;
                 }
@@ -146,18 +146,18 @@ void failoApdorojimas(const std::string &failoPavadinimas, int rezervas, int &nd
     Timer t;
     std::vector<Studentas> studentai = skaitymasIsFailo<std::vector<Studentas>>(failoPavadinimas, ndKiekis, rezervas);
     double skaitymoTrukme = t.elapsed(); // Skirtumas (s)
-    t.reset();
+/*     t.reset();
     skaiciavimas(studentai, medianos, ndKiekis);
-    double skaiciavimoTrukme = t.elapsed();
+    double skaiciavimoTrukme = t.elapsed(); */
     t.reset();
-    rusiavimasSkirstymas(studentai, rPasirinkimas);
+    rusiavimasSkirstymas(studentai, rPasirinkimas, medianos);
     double rusiavimoTrukme = t.elapsed();
     t.reset();
     isvestis(studentai, medianos, failas);
     double isvedimoTrukme = t.elapsed(); // Skirtumas (s)
     std::cout << "Failo nuskaitymas į studentai vektorių užtruko: " << skaitymoTrukme << " s\n";
-    std::cout << "Rezultatų skaičiavimas užtruko: " << skaiciavimoTrukme << " s\n";
+/*     std::cout << "Rezultatų skaičiavimas užtruko: " << skaiciavimoTrukme << " s\n"; */
     std::cout << "Duomenų rūšiavimas pagal pasirinktą parametrą užtruko: " << rusiavimoTrukme << " s\n";
     std::cout << "Studentų išvedimas užtruko: " << isvedimoTrukme << " s\n";
-    std::cout << "Bendra trukmė: " << skaitymoTrukme + skaiciavimoTrukme + rusiavimoTrukme + isvedimoTrukme << " s\n";
+    std::cout << "Bendra trukmė: " << skaitymoTrukme + /* skaiciavimoTrukme + */ rusiavimoTrukme + isvedimoTrukme << " s\n";
 }

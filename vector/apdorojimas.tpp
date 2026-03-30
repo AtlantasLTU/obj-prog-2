@@ -4,14 +4,14 @@
 #include <fstream>
 #include <list>
 
-template<class Konteineris>
+/* template<class Konteineris>
 void skaiciavimas(Konteineris &A, bool medianos, int ndKiekis){
 
     auto funkcija = medianos ? galutinisMedF : galutinisVidF;
 
     for(Studentas &X : A)
         X.setGalutinis(funkcija(X, ndKiekis));
-}
+} */
 
 template<class T, class Konteineris>
 void rusiavimasPagal(Konteineris &studentai, T lambdaFunkcija, bool didejanciai = true)
@@ -38,14 +38,14 @@ void rusiavimasPagal(Konteineris &studentai, T lambdaFunkcija, bool didejanciai 
 }
 
 template<class Konteineris>
-void rusiavimasSkirstymas(Konteineris &studentai, int rPasirinkimas){
+void rusiavimasSkirstymas(Konteineris &studentai, int rPasirinkimas, bool medianos, int ndKiekis = 0){
     switch(rPasirinkimas){
         case 1: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getVardas();}); break;
         case 2: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getVardas();}, false); break;
         case 3: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getPavarde();}); break;
         case 4: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getPavarde();}, false); break;
-        case 5: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getGalutinis();}); break;
-        case 6: rusiavimasPagal(studentai, [](const Studentas &studentas){return studentas.getGalutinis();}, false); break;
+        case 5: rusiavimasPagal(studentai, [medianos, ndKiekis](const Studentas &studentas){return studentas.galutinis(medianos, ndKiekis);}); break;
+        case 6: rusiavimasPagal(studentai, [medianos, ndKiekis](const Studentas &studentas){return studentas.galutinis(medianos, ndKiekis);}, false); break;
         default:
         {
             break;
@@ -54,11 +54,11 @@ void rusiavimasSkirstymas(Konteineris &studentai, int rPasirinkimas){
 }
 
 template<class Konteineris>
-void skirstymas(Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai)
+void skirstymas(Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0)
 {
     for(Studentas &A : studentai)
     {
-        if(A.getGalutinis()<5){
+        if(A.galutinis(medianos, ndKiekis)<5){
             vargsiukai.push_back(std::move(A));
         } else {
             galvociai.push_back(std::move(A));
@@ -67,11 +67,11 @@ void skirstymas(Konteineris &studentai, Konteineris &galvociai, Konteineris &var
 }
 
 template<class Konteineris>
-void skirstymasStrat1(Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai)
+void skirstymasStrat1(Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0)
 {
     for(Studentas &A : studentai)
     {
-        if(A.getGalutinis()<5){
+        if(A.galutinis(medianos, ndKiekis)<5){
             vargsiukai.push_back(A);
         } else {
             galvociai.push_back(A);
@@ -96,10 +96,10 @@ void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai){
 } */
 
 template<class Konteineris> // jeigu isrusiuotas konteineris pries tai
-void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai){
-    auto it = std::lower_bound(studentai.begin(), studentai.end(), 5, [](const Studentas &A, int skaic)
+void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0){
+    auto it = std::lower_bound(studentai.begin(), studentai.end(), 5, [medianos, ndKiekis](const Studentas &A, int skaic)
         {
-            return A.getGalutinis() < skaic;
+            return A.galutinis(medianos, ndKiekis) < skaic;
         }
     );
     vargsiukai.insert(vargsiukai.begin(), std::make_move_iterator(studentai.begin()), std::make_move_iterator(it));
@@ -107,10 +107,10 @@ void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai){
 }
 
 template<class Konteineris>
-void skirstymasStrat3(Konteineris &studentai, Konteineris &vargsiukai){
+void skirstymasStrat3(Konteineris &studentai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0){
     auto it = std::partition(studentai.begin(), studentai.end(),
-        [](const Studentas& A){
-            return A.getGalutinis() >= 5;
+        [medianos, ndKiekis](const Studentas& A){
+            return A.galutinis(medianos, ndKiekis) >= 5;
         }
     );
     vargsiukai.insert(vargsiukai.begin(), std::make_move_iterator(it), std::make_move_iterator(studentai.end()));

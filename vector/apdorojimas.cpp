@@ -3,7 +3,7 @@
 #include "random.h"
 #include <fstream>
 
-void skaiciavimas(std::vector<Studentas> &A, bool medianos, int ndKiekis){
+/* void skaiciavimas(std::vector<Studentas> &A, bool medianos, int ndKiekis){
     if(medianos)
     {
         for(Studentas &X : A){
@@ -31,7 +31,7 @@ void skaiciavimas(std::vector<Studentas> &A, bool medianos){
             X.setGalutinis(galutinisVid(X));
         }
     }
-}
+} */
 
 void failoGeneravimas(int studentuKiekis, int ndKiekis)
 {
