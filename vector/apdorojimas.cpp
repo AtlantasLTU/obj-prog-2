@@ -45,9 +45,7 @@ void failoGeneravimas(int studentuKiekis, int ndKiekis)
     out += "Egz.\n";
     for(int i = 0; i < studentuKiekis; i++){
         Studentas A;
-        gen_map(A);
-        namuDarbuRezultataiRandom(A, ndKiekis);
-        egzaminoRezultatasRandom(A);
+        A.readRandom(ndKiekis);
         setw(A.getVardas(), 20, out);
         setw(A.getPavarde(), 20, out);
         for(int j = 0; j < ndKiekis; j++){

@@ -31,17 +31,14 @@ std::vector<Studentas> ivestiStudentus()
     std::vector<Studentas> studentai;
     while(true)
     {
-        Studentas A;
-        if(!skaitymas(A))
-        {
-            break;
-        }
+        Studentas A(std::cin);
+        if(!std::cin) break;
         studentai.push_back(std::move(A));
     }
     return studentai;
 }
 
-bool skaitymas(Studentas &A)
+/* bool skaitymas(Studentas &A)
 {
     std::string eilute;
     std::cout << "Įveskite studento vardą bei pavardę (ENTER - nutraukti įvedimą): ";
@@ -110,7 +107,7 @@ void egzaminoRezultatoIvestis(Studentas &A)
 {
     int balas = gautiSkaiciu("Įveskite egzamino rezultatą (1-10): ", 1, 10);
     A.setRez(balas);
-}
+} */
 
 int gautiSkaiciu(const std::string &pranešimas, int min, int max, bool galiButiTuscia /* = false */)
 {

@@ -2,7 +2,7 @@
 #include "studVPGen.h"
 #include "ivestis.h"
 
-Studentas skaitymasRandom()
+/* Studentas skaitymasRandom()
 {
     Studentas A;
     gen_map(A);
@@ -62,7 +62,7 @@ void namuDarbuRezultataiRandom(Studentas &A, int ndKiekis)
     for(int i = 0; i < ndKiekis; i++){
         A.addNd(dist(rng));
     }
-}
+} */
 
 std::vector<Studentas> ivestiStudentusRandom(int pasirinkimas)
 {
@@ -71,23 +71,24 @@ std::vector<Studentas> ivestiStudentusRandom(int pasirinkimas)
     {
         case 2:
         {
-            while(true)
+            Studentas A;
+            while(A.readSemiRandom())
             {
-                Studentas A;
-                if(!skaitymasRandom(A)){
-                    break;
-                }
-                studentai.push_back(A);
+                studentai.push_back(std::move(A));
+                A = Studentas{};
             }
-            return studentai;
+            break;
         }
         case 3:
         {
-            int studKiekis = randomStudentuKiekis();
+            int studKiekis = gautiSkaiciu("Įveskite norimą generuoti studentų kiekį: ", 0, 100);
             studentai.reserve(studKiekis);
-            for(int i = 0; i < studKiekis; i++)
+            for (int i = 0; i < studKiekis; i++)
             {
-                studentai.push_back(skaitymasRandom());
+                Studentas A;
+                int ndKiekis = gautiSkaiciu("Įveskite norimą generuoti namų darbų rezultatų kiekį: ", 0, 100);
+                A.readRandom(ndKiekis);
+                studentai.push_back(std::move(A));
             }
             break;
         }
