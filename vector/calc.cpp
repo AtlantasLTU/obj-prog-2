@@ -17,7 +17,7 @@ double galutinisMed(/* const  */Studentas &A){ // uzkomentuotas kodas toks pat k
     if(A.getNd().empty()) return 0.6*A.getRez();
 
     /* std::vector<int> nd = A.nd; */
-    A.getNd().resize(maxNdKiekis, 0);
+    A.resizeNd(maxNdKiekis, 0);
     std::sort(A.getNd().begin(), A.getNd().end());
 
     double med =
@@ -45,7 +45,7 @@ double galutinisMedF(/* const atkomentuoti, jei griztam prie nd vektoriaus kopij
     while(nd.size() < maxNdKiekis){
         nd.push_back(0);
     } */
-    A.getNd().resize(ndKiekis, 0);
+    A.resizeNd(ndKiekis, 0);
     std::sort(A.getNd().begin(), A.getNd().end());
 
     double med =

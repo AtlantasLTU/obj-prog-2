@@ -36,7 +36,7 @@ std::vector<Studentas> ivestiStudentus()
         {
             break;
         }
-        studentai.push_back(A);
+        studentai.push_back(std::move(A));
     }
     return studentai;
 }
@@ -92,14 +92,15 @@ bool studentoVardoPavardesIvestis(Studentas &A, const std::string& eilute)
 void namuDarbuRezultatuIvestis(Studentas &A)
 {
     std::cout << "Įveskite " << maxNdKiekis << " namų darbų rezultatų." << std::endl;
-    while (A.getNd().size()<maxNdKiekis)
+    auto &nd = A.getNd();
+    while (nd.size()<maxNdKiekis)
     {
         int balas = gautiSkaiciu("Įveskite namų darbų rezultatą nuo 1 iki 10 (ENTER - baigti): ", 1, 10, true);
         if (balas == -1) break; 
         A.addNd(balas);
     }
 
-    if(A.getNd().size()==maxNdKiekis)
+    if(nd.size()==maxNdKiekis)
     {
         std::cout << "Įvestas didžiausias namų darbų rezultatų kiekis" << std::endl;
     }
