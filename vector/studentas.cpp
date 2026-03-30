@@ -81,6 +81,7 @@ std::istream& Studentas::readStudent(std::istream& is, int ndKiekis)
         } // jei enter - iseina
         if(eilute.empty())
         {
+            is.setstate(std::ios::failbit);
             return is;
         }
         while(!studentoVardoPavardesIvestis(eilute))

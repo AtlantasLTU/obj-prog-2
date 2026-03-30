@@ -35,6 +35,7 @@ std::vector<Studentas> ivestiStudentus()
         if(!std::cin) break;
         studentai.push_back(std::move(A));
     }
+    std::cin.clear();
     return studentai;
 }
 
