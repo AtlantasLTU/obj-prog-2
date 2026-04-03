@@ -14,8 +14,7 @@ void Studentas::addNd(int paz)
 
 void Studentas::resizeNd(int n, int skaicius)
 {
-    if(nd.size() < n)
-        nd.resize(n, skaicius);
+    nd.resize(n, skaicius);
 };
 
 double Studentas::galutinis(bool medianos, int ndKiekis) const
@@ -203,4 +202,10 @@ void Studentas::egzRandom()
     static std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(1, 10);
     rez = dist(rng);
+}
+
+Studentas::~Studentas() {
+    vardas.clear();
+    pavarde.clear();
+    nd.clear();
 }

@@ -64,6 +64,9 @@ void skirstymas(Konteineris &studentai, Konteineris &galvociai, Konteineris &var
             galvociai.push_back(std::move(A));
         }
     }
+    studentai.clear();
+    vargsiukai.shrink_to_fit();
+    galvociai.shrink_to_fit();
 }
 
 template<class Konteineris>
@@ -77,6 +80,9 @@ void skirstymasStrat1(Konteineris &studentai, Konteineris &galvociai, Konteineri
             galvociai.push_back(A);
         }
     }
+    studentai.clear();
+    vargsiukai.shrink_to_fit();
+    galvociai.shrink_to_fit();
 }
 
 /* template<class Konteineris> // jeigu neisrusiuotas konteineris pries tai
@@ -102,7 +108,7 @@ void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai, bool medi
             return A.galutinis(medianos, ndKiekis) < skaic;
         }
     );
-    vargsiukai.insert(vargsiukai.begin(), std::make_move_iterator(studentai.begin()), std::make_move_iterator(it));
+    vargsiukai.insert(vargsiukai.end(), std::make_move_iterator(studentai.begin()), std::make_move_iterator(it));
     studentai.erase(studentai.begin(), it);
 }
 
@@ -113,6 +119,6 @@ void skirstymasStrat3(Konteineris &studentai, Konteineris &vargsiukai, bool medi
             return A.galutinis(medianos, ndKiekis) >= 5;
         }
     );
-    vargsiukai.insert(vargsiukai.begin(), std::make_move_iterator(it), std::make_move_iterator(studentai.end()));
+    vargsiukai.insert(vargsiukai.end(), std::make_move_iterator(it), std::make_move_iterator(studentai.end()));
     studentai.erase(it, studentai.end());
 }

@@ -19,20 +19,9 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
     std::string vardas, pavarde;
     int paz;
     
-    while (open_f >> vardas >> pavarde) {
+    while (true) {
         Studentas studentas;
-        studentas.setVardas(std::move(vardas)); //std::move - vardas istrinamas is atminties, t.y. string vardas tampa "", ir tai kas buvo jame dabar priklauso studento strukturos vardui. Paprastai tariant: nedaroma kopija, o vardas priskiriamas studentas.vardas su std::move; taip susitaupo laiko
-        studentas.setPavarde(std::move(pavarde));
-        // uzkomentuotas kodas parodo, kad po std::move dingsta string vardas esantis string, nes jis perkeltas i studentas.vardas
-        // std::cout << "vardas: " << vardas << "\n";
-
-        for(int i = 0; i < ndKiekis; i++){
-            if(!(open_f >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
-            studentas.addNd(paz);
-        }
-        int rez;
-        if(!(open_f >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
-            studentas.setRez(rez);
+        if(!(studentas.readStudent(open_f, ndKiekis))) break;
         studentai.push_back(std::move(studentas));
     }
 
