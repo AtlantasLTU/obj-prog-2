@@ -69,7 +69,19 @@ Visi testavimo atvejai testuoti 10 kartų, su medianų skaičiavimu.
 |struct|-O3|18.0112 s|349.5 KB|
 |class|-O3|55.4038 s|332.7 KB|
 
+### Pastebėjimai
+  Ta pati programa perdaryta su class tipu lėtesnė ~3x negu su struct, priklausomai nuo optimzacijos vėliavėlės. Taip yra todėl, kad class tipo programoje, galutinis balas skaičiuojamas, kai jo prireikia ir nėra saugojamas atminty, tai sutaupo atminties, tačiau padidina skaičiavimų laiką. Pagrinde -Ofast vėliavėlė greičiausia, tačiau esant milijonui studentų -O3 aplenkia -Ofast vėliavėlė, galbūt -O3 geriau suoptimizuoja failų skaitymą. Mažiausią failą sukuria -O1 vėliavėlė, o didžiausią -O3. Taip yra todėl, kad -O1 skirtas balansui tarp greičio ir dydžio, o -O3 skirtas našesniam programos veikimui.
+
+  Nors struct tipas greitesnis, tačiau class tipas saugesnis ir plečiant programos apimtį, enkapsuliacija, paveldamumas ir kitos class tipo ypatybės padaro jį naudingesniu.
+
 # Relizų aprašas
+v1.1
+
+    Studento struktūra paversta į klasę
+    Implementuoti get'eriai, set'eriai, konstruktoriai bei destruktorius.
+    Kintamieji privatūs, pasiekiami tik per studento klasės metodus.
+    Refaktorintas ir patobulintas random vardų, pavardžių generatorius.
+    Nebesaugojamas kintamasis galutinio rezultato, jis skaičiuojamas tik, kai jo prireikia.
 
 v1.0
 
