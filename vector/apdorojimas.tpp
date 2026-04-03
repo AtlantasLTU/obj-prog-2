@@ -65,8 +65,10 @@ void skirstymas(Konteineris &studentai, Konteineris &galvociai, Konteineris &var
         }
     }
     studentai.clear();
-    vargsiukai.shrink_to_fit();
-    galvociai.shrink_to_fit();
+    if constexpr(!(std::is_same_v<Konteineris, std::list<Studentas>>)){
+        vargsiukai.shrink_to_fit();
+        galvociai.shrink_to_fit();
+    }
 }
 
 template<class Konteineris>
@@ -81,8 +83,10 @@ void skirstymasStrat1(Konteineris &studentai, Konteineris &galvociai, Konteineri
         }
     }
     studentai.clear();
-    vargsiukai.shrink_to_fit();
-    galvociai.shrink_to_fit();
+    if constexpr(!(std::is_same_v<Konteineris, std::list<Studentas>>)){
+        vargsiukai.shrink_to_fit();
+        galvociai.shrink_to_fit();
+    }
 }
 
 /* template<class Konteineris> // jeigu neisrusiuotas konteineris pries tai

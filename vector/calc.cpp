@@ -3,7 +3,7 @@
 #include <numeric>
 #include <iostream>
 
-double galutinisVid(const Studentas &A){
+/*double galutinisVid(const Studentas &A){
     if(A.getNd().empty()) return 0.6*A.getRez();
 
     int sum = std::accumulate(A.getNd().begin(), A.getNd().end(), 0);
@@ -13,10 +13,10 @@ double galutinisVid(const Studentas &A){
 }
 
 
-double galutinisMed(/* const  */Studentas &A){ // uzkomentuotas kodas toks pat kaip ir F sitos funkcijos versijoje, kuri aprasyta zemiau
+double galutinisMed(/* const  *//*Studentas &A){ // uzkomentuotas kodas toks pat kaip ir F sitos funkcijos versijoje, kuri aprasyta zemiau
     if(A.getNd().empty()) return 0.6*A.getRez();
 
-    /* std::vector<int> nd = A.nd; */
+    /* std::vector<int> nd = A.nd; *//*
     A.resizeNd(maxNdKiekis, 0);
     std::sort(A.getNd().begin(), A.getNd().end());
 
@@ -38,13 +38,13 @@ double galutinisVidF(Studentas &A, int ndKiekis){ // perduodam ndKieki, jis naud
 }
 
 
-double galutinisMedF(/* const atkomentuoti, jei griztam prie nd vektoriaus kopijavimo */Studentas &A, int ndKiekis){
+double galutinisMedF(/* const atkomentuoti, jei griztam prie nd vektoriaus kopijavimo *//*Studentas &A, int ndKiekis){
     if(A.getNd().empty()) return 0.6*A.getRez();
     //geriau kopijuot, bet kadangi veliau nenaudosim A.nd vektoriaus niekur, tai kopija nebutina
     /* std::vector<int> nd = A.nd;
     while(nd.size() < maxNdKiekis){
         nd.push_back(0);
-    } */
+    } *//*
     A.resizeNd(ndKiekis, 0);
     std::sort(A.getNd().begin(), A.getNd().end());
 
@@ -54,4 +54,4 @@ double galutinisMedF(/* const atkomentuoti, jei griztam prie nd vektoriaus kopij
         : A.getNd().at(ndKiekis/2);
 
     return 0.4 * med + 0.6 * A.getRez();
-}
+}*/
