@@ -1,37 +1,4 @@
 #include "apdorojimas.h"
-#include "studVPGen.h"
-#include "random.h"
-#include <fstream>
-
-/* void skaiciavimas(std::vector<Studentas> &A, bool medianos, int ndKiekis){
-    if(medianos)
-    {
-        for(Studentas &X : A){
-            X.setGalutinis(galutinisMedF(X, ndKiekis));
-        }
-    }
-    else
-    {
-        for(Studentas &X : A){
-            X.setGalutinis(galutinisVidF(X, ndKiekis));
-        }
-    }
-}
-
-void skaiciavimas(std::vector<Studentas> &A, bool medianos){
-    if(medianos)
-    {
-        for(Studentas &X : A){
-            X.setGalutinis(galutinisMed(X));
-        }
-    }
-    else
-    {
-        for(Studentas &X : A){
-            X.setGalutinis(galutinisVid(X));
-        }
-    }
-} */
 
 void failoGeneravimas(int studentuKiekis, int ndKiekis)
 {

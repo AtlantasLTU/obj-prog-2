@@ -1,17 +1,4 @@
 #include "apdorojimas.h"
-#include "studVPGen.h"
-#include "random.h"
-#include <fstream>
-#include <list>
-
-/* template<class Konteineris>
-void skaiciavimas(Konteineris &A, bool medianos, int ndKiekis){
-
-    auto funkcija = medianos ? galutinisMedF : galutinisVidF;
-
-    for(Studentas &X : A)
-        X.setGalutinis(funkcija(X, ndKiekis));
-} */
 
 template<class T, class Konteineris>
 void rusiavimasPagal(Konteineris &studentai, T lambdaFunkcija, bool didejanciai = true)
@@ -88,22 +75,6 @@ void skirstymasStrat1(Konteineris &studentai, Konteineris &galvociai, Konteineri
         galvociai.shrink_to_fit();
     }
 }
-
-/* template<class Konteineris> // jeigu neisrusiuotas konteineris pries tai
-void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai){
-    for(auto it = studentai.begin(); it != studentai.end();)
-    {
-        if(it->galutinis < 5)
-        {
-            vargsiukai.push_back(std::move(*it));
-            it = studentai.erase(it);
-        }
-        else
-        {
-            ++it;
-        }
-    }
-} */
 
 template<class Konteineris> // jeigu isrusiuotas konteineris pries tai
 void skirstymasStrat2(Konteineris &studentai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0){

@@ -2,10 +2,11 @@
 #define APDOROJIMAS_H
 
 #include <algorithm>
+#include <format>
 #include "studentas.h"
-#include "calc.h"
-
-/* void skaiciavimas(std::vector<Studentas> &A, bool medianos); */
+#include "random.h"
+#include <fstream>
+#include <list>
 
 void failoGeneravimas(int studentuKiekis, int ndKiekis);
 

@@ -1,5 +1,6 @@
 #include "studentas.h"
 #include "ivestis.h"
+#include "random.h"
 #include <algorithm>
 #include <numeric>
 #include <iostream>
@@ -167,8 +168,6 @@ void Studentas::readRandom(int ndKiekis)
 
 void Studentas::genVardaPavarde()
 {
-    static std::mt19937 mt(static_cast<long unsigned int>(
-        std::chrono::high_resolution_clock::now().time_since_epoch().count()));
     std::uniform_int_distribution<int> dist(0, 9);
 
     static const std::vector<std::string> vardai = {
@@ -184,24 +183,22 @@ void Studentas::genVardaPavarde()
         "Pavardenis6","Pavardenis7","Pavardenis8","Pavardenis9","Pavardenis10"
     };
 
-    vardas = vardai[dist(mt)];
+    vardas = vardai[dist(rng())];
     // paskutinis simbolis 's' = vyras
-    pavarde = (*vardas.rbegin() == 's') ? pavardes_v[dist(mt)] : pavardes_m[dist(mt)];
+    pavarde = (*vardas.rbegin() == 's') ? pavardes_v[dist(rng())] : pavardes_m[dist(rng())];
 }
 
 void Studentas::ndRandom(int ndKiekis)
 {
-    static std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(1, 10);
     for (int i = 0; i < ndKiekis; i++)
-        nd.push_back(dist(rng));
+        nd.push_back(dist(rng()));
 }
 
 void Studentas::egzRandom()
 {
-    static std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<int> dist(1, 10);
-    rez = dist(rng);
+    rez = dist(rng());
 }
 
 Studentas::~Studentas() {

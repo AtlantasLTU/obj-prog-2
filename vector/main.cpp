@@ -1,9 +1,5 @@
 #include "main.h"
 
-// programoje turi atsirasti realizacija su deque ir list, vector PALIEKAM
-// matuoti duomenu nuskaityma is failu i atitinkama konteineri (failai islieka tokie patys)
-// studentu rusiavimas didejimo tvarka (funkcija sort);
-// studentu skirstymas i dvi grupes/kategorijas vargsiukai ir galvociai
 int main()
 {
     try
