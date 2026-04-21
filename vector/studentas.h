@@ -22,6 +22,12 @@ public:
     Studentas() : vardas(""), pavarde(""), nd(), rez(0){};
     Studentas(std::istream& is, int ndKiekis = 0) { readStudent(is, ndKiekis); };
 
+    // copy constructor
+    Studentas(const Studentas& kitas);
+
+    // copy assignment operator
+    Studentas& operator=(const Studentas&);
+
     // getters
     const std::string &getVardas() const { return vardas; };
     const std::string &getPavarde() const { return pavarde; };

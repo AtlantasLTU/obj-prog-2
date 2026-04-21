@@ -206,3 +206,21 @@ Studentas::~Studentas() {
     pavarde.clear();
     nd.clear();
 }
+
+Studentas::Studentas(const Studentas& kitas)
+    : vardas(kitas.vardas),
+    pavarde(kitas.pavarde),
+    nd(kitas.nd),
+    rez(kitas.rez)
+{}
+
+Studentas& Studentas::operator=(const Studentas& kitas){
+    if(this != &kitas)
+    {
+        vardas = kitas.vardas;
+        pavarde = kitas.pavarde;
+        nd = kitas.nd;
+        rez = kitas.rez;
+    }
+    return *this;
+}
