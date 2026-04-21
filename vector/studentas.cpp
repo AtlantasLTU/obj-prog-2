@@ -56,43 +56,41 @@ double Studentas::galutinis(bool medianos, int ndKiekis) const
     }
 }
 
-std::istream& Studentas::readStudent(std::istream& is, int ndKiekis)
+std::istream& Studentas::readStudentFile(std::istream& is, int ndKiekis)
 {
-    if(&is != &std::cin)
+    if(!(is >> vardas >> pavarde)) return is;
+    int paz;
+    for(int i = 0; i < ndKiekis; i++)
     {
-        if(!(is >> vardas >> pavarde)) return is;
-        int paz;
-        for(int i = 0; i < ndKiekis; i++)
-        {
-            if(!(is >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
-                nd.push_back(paz);
-        }
-        if(!(is >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
+        if(!(is >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
+            nd.push_back(paz);
     }
-    else
-    {
-        std::string eilute;
-        std::cout << "Įveskite studento vardą bei pavardę (ENTER - nutraukti įvedimą): ";
+    if(!(is >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
+    return is;
+}
 
-            // perskaito eilute ir jei perskaitymas nesekmingas, tai ziuri ar std::cin.eof, jei taip, tai programa uzbaigiama, jei ne, tai isvalo ivesties stream'o veliaveles ir vel prasoma ivesti
-        if (!std::getline(std::cin, eilute))
-        {
-            cinEOFgaudymas();
-            return is;
-        } // jei enter - iseina
-        if(eilute.empty())
-        {
-            is.setstate(std::ios::failbit);
-            return is;
-        }
-        while(!studentoVardoPavardesIvestis(eilute))
-        {
-            std::cout << "Įveskite studento vardą bei pavardę (ENTER - baigti): ";
-            if(!std::getline(std::cin, eilute) || eilute.empty()) return is;
-        }
-        namuDarbuRezultatuIvestis();
-        egzaminoRezultatoIvestis();
+std::istream& Studentas::readStudentConsole(std::istream& is){
+    std::string eilute;
+    std::cout << "Įveskite studento vardą bei pavardę (ENTER - nutraukti įvedimą): ";
+
+        // perskaito eilute ir jei perskaitymas nesekmingas, tai ziuri ar std::cin.eof, jei taip, tai programa uzbaigiama, jei ne, tai isvalo ivesties stream'o veliaveles ir vel prasoma ivesti
+    if (!std::getline(std::cin, eilute))
+    {
+        cinEOFgaudymas();
+        return is;
+    } // jei enter - iseina
+    if(eilute.empty())
+    {
+        is.setstate(std::ios::failbit);
+        return is;
     }
+    while(!studentoVardoPavardesIvestis(eilute))
+    {
+        std::cout << "Įveskite studento vardą bei pavardę (ENTER - baigti): ";
+        if(!std::getline(std::cin, eilute) || eilute.empty()) return is;
+    }
+    namuDarbuRezultatuIvestis();
+    egzaminoRezultatoIvestis();
     return is;
 }
 
@@ -245,3 +243,13 @@ Studentas& Studentas::operator=(Studentas&& kitas) noexcept
     }
     return *this;
 }
+
+std::istream& operator>>(std::istream& in, Studentas &A)
+{
+    A.readStudentConsole(in);
+    return in;
+}
+
+/* std::ostream& operator<<(std::ostream& out, const Studentas &A){
+
+} */

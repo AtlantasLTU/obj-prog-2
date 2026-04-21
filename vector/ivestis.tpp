@@ -21,7 +21,7 @@ Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis,
     
     while (true) {
         Studentas studentas;
-        if(!(studentas.readStudent(open_f, ndKiekis))) break;
+        if(!(studentas.readStudentFile(open_f, ndKiekis))) break;
         studentai.push_back(std::move(studentas));
     }
 
