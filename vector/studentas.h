@@ -61,6 +61,6 @@ public:
     ~Studentas();
 
     friend std::istream& operator>>(std::istream& in, Studentas &A);
-/*     friend std::ostream& operator<<(std::ostream& out, const Studentas &A);
- */};
+    friend std::ostream& operator<<(std::ostream& out, const Studentas &A);
+};
 #endif // STUDENTAS_H

@@ -250,6 +250,9 @@ std::istream& operator>>(std::istream& in, Studentas &A)
     return in;
 }
 
-/* std::ostream& operator<<(std::ostream& out, const Studentas &A){
-
-} */
+std::ostream& operator<<(std::ostream& out, const Studentas &A){
+    out << A.vardas << " " << A.pavarde << " ";
+    for(int X : A.nd) out << X << " ";
+    out << " " << A.rez;
+    return out; 
+}
