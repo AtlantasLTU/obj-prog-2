@@ -7,6 +7,7 @@
 #include <fstream>
 #include <random>
 #include <chrono>
+#include <utility>
 
 void Studentas::addNd(int paz)
 {
@@ -201,7 +202,8 @@ void Studentas::egzRandom()
     rez = dist(rng());
 }
 
-Studentas::~Studentas() {
+Studentas::~Studentas()
+{
     vardas.clear();
     pavarde.clear();
     nd.clear();
@@ -214,13 +216,32 @@ Studentas::Studentas(const Studentas& kitas)
     rez(kitas.rez)
 {}
 
-Studentas& Studentas::operator=(const Studentas& kitas){
+Studentas& Studentas::operator=(const Studentas& kitas)
+{
     if(this != &kitas)
     {
         vardas = kitas.vardas;
         pavarde = kitas.pavarde;
         nd = kitas.nd;
         rez = kitas.rez;
+    }
+    return *this;
+}
+
+Studentas::Studentas(Studentas&& kitas) noexcept
+    : vardas(std::move(kitas.vardas)),
+    pavarde(std::move(kitas.pavarde)),
+    nd(std::move(kitas.nd)),
+    rez(std::exchange(kitas.rez, 0))
+{}
+
+Studentas& Studentas::operator=(Studentas&& kitas) noexcept
+{
+    if(this != &kitas){
+        vardas = std::move(kitas.vardas);
+        pavarde = std::move(kitas.pavarde);
+        nd = std::move(kitas.nd);
+        rez = std::exchange(kitas.rez, 0);
     }
     return *this;
 }

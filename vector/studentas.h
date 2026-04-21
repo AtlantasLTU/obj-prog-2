@@ -23,11 +23,17 @@ public:
     Studentas(std::istream& is, int ndKiekis = 0) { readStudent(is, ndKiekis); };
 
     // copy constructor
-    Studentas(const Studentas& kitas);
+    Studentas(const Studentas &kitas);
 
     // copy assignment operator
     Studentas& operator=(const Studentas&);
 
+    // move constructor
+    Studentas(Studentas&&) noexcept;
+
+    // move assignment operator
+    Studentas& operator=(Studentas&&) noexcept;
+    
     // getters
     const std::string &getVardas() const { return vardas; };
     const std::string &getPavarde() const { return pavarde; };
