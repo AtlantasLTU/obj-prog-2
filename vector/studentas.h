@@ -22,8 +22,7 @@ class Studentas{
 public:
     // constructors
     Studentas() : vardas(""), pavarde(""), nd(), rez(0){};
-    Studentas(std::istream& is) { readStudentConsole(is); };
-    Studentas(std::istream& is, int ndKiekis) { readStudentFile(is, ndKiekis); };
+    Studentas(std::istream& is, int ndKiekis = 0){ read(is, ndKiekis); };
 
     // copy constructor
     Studentas(const Studentas &kitas);
@@ -49,8 +48,9 @@ public:
     void setNd(std::vector<int> n) { nd = std::move(n);}
     void setRez(int r) { rez = r; }
 
-    std::istream& readStudentFile(std::istream& is, int ndKiekis);  // set'eriai
+    std::istream& readStudentStream(std::istream& is, int ndKiekis);  // set'eriai
     std::istream& readStudentConsole(std::istream& is);  // set'eriai
+    void read(std::istream& is, int ndKiekis = 0);
     bool readSemiRandom();
     void readRandom(int ndKiekis);
     void addNd(int paz);

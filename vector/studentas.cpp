@@ -56,16 +56,33 @@ double Studentas::galutinis(bool medianos, int ndKiekis) const
     }
 }
 
-std::istream& Studentas::readStudentFile(std::istream& is, int ndKiekis)
+std::istream& Studentas::readStudentStream(std::istream& is, int ndKiekis)
 {
     if(!(is >> vardas >> pavarde)) return is;
     int paz;
-    for(int i = 0; i < ndKiekis; i++)
+    if(ndKiekis == 0)
     {
-        if(!(is >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
-            nd.push_back(paz);
+        std::vector<int> skaiciai;
+        while(is >> paz)
+        {
+            skaiciai.push_back(paz);
+        }
+        if(skaiciai.empty()){
+            throw std::runtime_error("Klaida: įvesty nerasta nei namų darbų, nei egzamino pažymių");
+        }
+        rez = skaiciai.back();
+        skaiciai.pop_back();
+        nd = skaiciai;
     }
-    if(!(is >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
+    else
+    {
+        for(int i = 0; i < ndKiekis; i++)
+        {
+            if(!(is >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
+                nd.push_back(paz);
+        }
+        if(!(is >> rez)) throw std::runtime_error("Klaida: netinkamas egzamino rezultatas faile.");
+    }
     return is;
 }
 
@@ -205,6 +222,7 @@ Studentas::~Studentas()
     vardas.clear();
     pavarde.clear();
     nd.clear();
+    rez = 0;
 }
 
 Studentas::Studentas(const Studentas& kitas)
@@ -244,15 +262,26 @@ Studentas& Studentas::operator=(Studentas&& kitas) noexcept
     return *this;
 }
 
-std::istream& operator>>(std::istream& in, Studentas &A)
+std::istream& operator>>(std::istream& is, Studentas &A)
 {
-    A.readStudentConsole(in);
-    return in;
+    A.read(is);
+    return is;
 }
 
 std::ostream& operator<<(std::ostream& out, const Studentas &A){
     out << A.vardas << " " << A.pavarde << " ";
     for(int X : A.nd) out << X << " ";
-    out << " " << A.rez;
+    out << A.rez;
     return out; 
+}
+
+void Studentas::read(std::istream& is, int ndKiekis){
+    if(&is == &std::cin)
+    {
+        readStudentConsole(is);
+    }
+    else
+    {
+        readStudentStream(is, ndKiekis);
+    }
 }

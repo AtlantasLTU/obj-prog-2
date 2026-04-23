@@ -31,7 +31,8 @@ std::vector<Studentas> ivestiStudentus()
     std::vector<Studentas> studentai;
     while(true)
     {
-        Studentas A(std::cin);
+        Studentas A;
+        std::cin >> A;
         if(!std::cin) break;
         studentai.push_back(std::move(A));
     }

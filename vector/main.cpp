@@ -115,7 +115,12 @@ int main()
                     std::cout << "Failų(-o) generavimas vidutiniškai užtruko: " << trukme/tPasirinkimas << " s\n";
                     break;
                 }
-                case 7: // darbo baigtis
+                case 7: // studento klasės testas
+                {
+                    testas();
+                    break;
+                }
+                case 8: // darbo baigtis
                 {
                     std::cout << "Darbas su programa baigtas.";
                     veikimas = false;

@@ -7,6 +7,7 @@
 #include "apdorojimas.h"
 #include "random.h"
 #include "Timer.h"
+#include "test.h"
 #include "main.tpp"
 #include <deque>
 #include <list>
