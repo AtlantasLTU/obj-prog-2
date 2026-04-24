@@ -5,7 +5,7 @@
     git
 
   ## Programos diegimas:
-    git clone https://github.com/AtlantasLTU/obj-prog-1.git
+    git clone https://github.com/AtlantasLTU/obj-prog-2.git
     cd ./obj-prog-1
     make
     ./main
@@ -23,9 +23,42 @@
     4 parinktis - skaitymas iš pasirinktino failo, rūšiavimas pasirinktinu būdu, duomenų apdorojimas ir išvedimas.
     5 parinktis - testavimas su failais, pasirenkamas failas, konteinerio tipas, strategija, testų skaičius, failai apdorojami (nuskaitymas, skaičiavimas, rūšiavimas, skirstymas) ir išvedami testo rezultatai į terminalą.
     6 parinktis - studentų failų generavimas, studentų, namų darbų kiekio pasirinkimas ir išvedimas į studentai*.txt failą.
-    7 parinktis - programos nutraukimas.
+    7 parinktis - studento klasės testavimas.
+    8 parinktis - programos nutraukimas.
 
-# Testavimas:
+# v1.2:
+  ## Realizuota "Rule of Five":
+    Destruktorius
+    Copy konstruktorius
+    Copy assignment operatorius
+    Move konstruktorius
+    Move assignment operatorius
+  - Realizuotas įvesties ir išvesties operatorių perdengimas.
+  - Sukurtas studento klasės metodų testas.
+
+### Įvesties operatoriaus naudojimas (veikia su visais įvedimo srautais):
+Kai naudojamas `operator>>` su failo srautu, pažymių kiekis
+nustatomas automatiškai: visi skaičiai po vardo ir pavardės
+laikomi namų darbų pažymiais, o pats paskutinis – egzamino balu.
+
+    Studentas A;
+    std::istringstream iss("Jonas Jonaitis 1 2 10");
+    iss >> A; // įvestis iš įvedimo srauto.
+    std::cin >> A; // įvestis iš konsolės.
+### Išvesties operatoriaus naudojimas (veikia su visais išvesties srautais):
+    Studentas A;
+    std::cout << A; // išvestis į ekraną
+    std::ostringstream out;
+    out << A; // išvesties srauto kūrimas
+    std::ofstream fout("studentai.txt");
+    fout << A; // išveda į failą
+
+## Studento klasės metodų testas.
+<img width="492" height="678" alt="image" src="https://github.com/user-attachments/assets/cfdab1e2-8a92-459d-be48-e76b1f63b31d" />
+
+
+
+# v1.1 testavimas:
 
 - Kompiuterio, su kuriuo testuota parametrai:
 <img width="1000" height="606" alt="image" src="https://github.com/user-attachments/assets/76e93716-e1de-4997-9bfb-c176b49e5e1e" />
@@ -75,6 +108,11 @@ Visi testavimo atvejai testuoti 10 kartų, su medianų skaičiavimu.
   Nors struct tipas greitesnis, tačiau class tipas saugesnis ir plečiant programos apimtį, enkapsuliacija, paveldamumas ir kitos class tipo ypatybės padaro jį naudingesniu.
 
 # Relizų aprašas
+v1.2
+
+    Realizuota rule of five.
+    Realizuotas įvesties išvesties operatorių perkrovimas.
+    Sukurtas studento klasės metodų testas.
 v1.1
 
     Studento struktūra paversta į klasę
