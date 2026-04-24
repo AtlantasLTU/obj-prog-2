@@ -6,7 +6,7 @@
 
   ## Programos diegimas:
     git clone https://github.com/AtlantasLTU/obj-prog-2.git
-    cd ./obj-prog-1
+    cd ./obj-prog-2
     make
     ./main
     
@@ -54,9 +54,7 @@ laikomi namų darbų pažymiais, o pats paskutinis – egzamino balu.
     fout << A; // išveda į failą
 
 ## Studento klasės metodų testas.
-<img width="492" height="678" alt="image" src="https://github.com/user-attachments/assets/cfdab1e2-8a92-459d-be48-e76b1f63b31d" />
-
-
+<img width="488" height="654" alt="image" src="https://github.com/user-attachments/assets/9ad64abe-d4fd-44e7-9725-a9ab8de91735" />
 
 # v1.1 testavimas:
 
