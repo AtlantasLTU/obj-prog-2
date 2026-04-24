@@ -99,7 +99,7 @@ void testInputOperator()
     iss >> A;
     std::cout << "Turėtų išvesti 'Jonas Jonaitis 1 2 10':\n" << A << std::endl;
     bool testas = (A.getVardas()=="Jonas" && A.getPavarde()=="Jonaitis" && A.getNd().at(0) == 1 && A.getNd().at(1) == 2 && A.getRez() == 10);
-    testoRezultatas("Input operatorius", testas);
+    testoRezultatas("Įvesties operatorius", testas);
 }
 
 void testOutputOperator()
@@ -120,34 +120,3 @@ void testoRezultatas(const std::string& testoPavadinimas, bool passed)
 {
     std::cout << (passed ? "PASS " : "FAIL ") << testoPavadinimas << "\n";
 }
-
-/* template<class Konteineris>
-Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis, int rezervas){
-    Konteineris studentai;
-    if constexpr(requires(Konteineris konteineris){konteineris.reserve(0);})
-        studentai.reserve(rezervas);
-    std::string eil, t;
-
-    std::ifstream open_f(failoPavadinimas);
-    if (!open_f.is_open()) throw std::runtime_error("Klaida: failas \"" + failoPavadinimas + "\" nerastas.");
-
-    if(!std::getline(open_f, eil)) throw std::runtime_error("Klaida: failas tuščias arba netinkantis");
-    std::istringstream antraste(eil);
-    antraste >> t >> t;
-    while(antraste >> t){
-        if(t == "Egz." || t == "Egzaminas") break;
-        ndKiekis++;
-    }
-
-    std::string vardas, pavarde;
-    int paz;
-    
-    while (true) {
-        Studentas studentas;
-        if(!(studentas.readStudentStream(open_f, ndKiekis))) break;
-        studentai.push_back(std::move(studentas));
-    }
-
-    open_f.close();
-    return studentai;
-} */
