@@ -48,19 +48,19 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
         }
         skirstymoPasirinkimas(sPasirinkimas, studentai, galvociai, vargsiukai, medianos, ndKiekis);
         skirstymoTrukme += t.elapsed();
-/*         t.reset();
-       isvestis(studentai, medianos, true, "rezultatai.txt");
+        t.reset();
+       isvestis(galvociai, medianos, true, "galvociai.txt");
         isvedimoTrukme1 += t.elapsed(); // Skirtumas (s)
         t.reset();
         isvestis(vargsiukai, medianos, true, "vargsiukai.txt");
-        isvedimoTrukme2 += t.elapsed(); // Skirtumas (s) */
+        isvedimoTrukme2 += t.elapsed(); // Skirtumas (s)
     }
     std::cout << "Failo nuskaitymas į studentai konteinerį vidutiniškai užtruko: " << skaitymoTrukme/tPasirinkimas << " s\n";
 /*     std::cout << "Rezultatų skaičiavimas vidutiniškai užtruko: " << skaiciavimoTrukme/tPasirinkimas << " s\n"; */
     std::cout << "Duomenų rūšiavimas didėjančiai vidutiniškai užtruko: " << rusiavimoTrukme/tPasirinkimas << " s\n";
     std::cout << "Studentų skirstymas pagal pažymius vidutiniškai užtruko: " << skirstymoTrukme/tPasirinkimas << " s\n";
-/*     std::cout << "Studentų išvedimas į vargsiukai.txt vidutiniškai užtruko: " << isvedimoTrukme1/tPasirinkimas << " s\n";
-    std::cout << "Studentų išvedimas į galvociai.txt vidutiniškai užtruko: " << isvedimoTrukme2/tPasirinkimas << " s\n"; */
+    std::cout << "Studentų išvedimas į galvociai.txt vidutiniškai užtruko: " << isvedimoTrukme1/tPasirinkimas << " s\n";
+    std::cout << "Studentų išvedimas į vargsiukai.txt vidutiniškai užtruko: " << isvedimoTrukme2/tPasirinkimas << " s\n";
     std::cout << "Bendra trukmė: " << skaitymoTrukme + skaiciavimoTrukme + rusiavimoTrukme + skirstymoTrukme + isvedimoTrukme1 + isvedimoTrukme2 << " s\n";
 }
 
