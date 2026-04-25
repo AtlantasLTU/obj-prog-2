@@ -26,6 +26,16 @@
     7 parinktis - studento klasės testavimas.
     8 parinktis - programos nutraukimas.
 
+# v1.5:
+  ## Pridėta bazinė klasė Zmogus:
+    Klasė studentas dabar išvestinė.
+    Studento klasė paveldi iš žmogaus klasės vardą bei pavardę, metodus susijusiais su šiais kintamaisiais
+    Klasė abstrakti dėl virtualaus destruktoriaus.
+
+  - Studento klasės rule of five atnaujintas, kad veiktų su bazinė klase.
+  - Rule of five taip pat realizuotas Zmogaus klasėje.
+  - Išlaikytas v1.2 testas bei funkcionalumas.
+
 # v1.2:
   ## Realizuota "Rule of Five":
     Destruktorius
