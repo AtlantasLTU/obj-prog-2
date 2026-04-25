@@ -76,6 +76,8 @@ std::istream& Studentas::readStudentStream(std::istream& is, int ndKiekis)
     }
     else
     {
+        nd.clear();
+        nd.reserve(ndKiekis);
         for(int i = 0; i < ndKiekis; i++)
         {
             if(!(is >> paz)) throw std::runtime_error("Klaida: netinkami pažymiai faile.");
@@ -219,8 +221,6 @@ void Studentas::egzRandom()
 
 Studentas::~Studentas()
 {
-    vardas.clear();
-    pavarde.clear();
     nd.clear();
     rez = 0;
 }
