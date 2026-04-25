@@ -27,10 +27,7 @@ class Zmogus {
         void setVardas(const std::string& v) { vardas = std::move(v); }
         void setPavarde(const std::string& p) { pavarde = std::move(p); }
 
-        virtual ~Zmogus() {
-            vardas.clear();
-            pavarde.clear();
-        };
+        virtual ~Zmogus() = 0; // destruktorius, kuris abstraktuoja visa zmogaus klase.
 };
 
 #endif
