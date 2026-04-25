@@ -36,6 +36,10 @@
   - Rule of five taip pat realizuotas Zmogaus klasėje.
   - Išlaikytas v1.2 testas bei funkcionalumas.
 
+  Bandant sukurti Zmogaus tipo objektą, išmeta klaidą, kad klasė abstrakti:
+  <img width="693" height="157" alt="image" src="https://github.com/user-attachments/assets/cd726a52-8453-4cb9-9fb5-59956c8ef023" />
+
+
 # v1.2:
   ## Realizuota "Rule of Five":
     Destruktorius
