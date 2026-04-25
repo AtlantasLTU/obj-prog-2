@@ -226,8 +226,7 @@ Studentas::~Studentas()
 }
 
 Studentas::Studentas(const Studentas& kitas)
-    : vardas(kitas.vardas),
-    pavarde(kitas.pavarde),
+    : Zmogus(kitas),
     nd(kitas.nd),
     rez(kitas.rez)
 {}
@@ -236,8 +235,7 @@ Studentas& Studentas::operator=(const Studentas& kitas)
 {
     if(this != &kitas)
     {
-        vardas = kitas.vardas;
-        pavarde = kitas.pavarde;
+        Zmogus::operator=(kitas);
         nd = kitas.nd;
         rez = kitas.rez;
     }
@@ -245,8 +243,7 @@ Studentas& Studentas::operator=(const Studentas& kitas)
 }
 
 Studentas::Studentas(Studentas&& kitas) noexcept
-    : vardas(std::move(kitas.vardas)),
-    pavarde(std::move(kitas.pavarde)),
+    : Zmogus(std::move(kitas)),
     nd(std::move(kitas.nd)),
     rez(std::exchange(kitas.rez, 0))
 {}
@@ -254,8 +251,7 @@ Studentas::Studentas(Studentas&& kitas) noexcept
 Studentas& Studentas::operator=(Studentas&& kitas) noexcept
 {
     if(this != &kitas){
-        vardas = std::move(kitas.vardas);
-        pavarde = std::move(kitas.pavarde);
+        Zmogus::operator=(std::move(kitas));
         nd = std::move(kitas.nd);
         rez = std::exchange(kitas.rez, 0);
     }
@@ -269,9 +265,9 @@ std::istream& operator>>(std::istream& is, Studentas &A)
 }
 
 std::ostream& operator<<(std::ostream& out, const Studentas &A){
-    out << A.vardas << " " << A.pavarde << " ";
-    for(int X : A.nd) out << X << " ";
-    out << A.rez;
+    out << A.getVardas() << " " << A.getPavarde() << " ";
+    for(int X : A.getNd()) out << X << " ";
+    out << A.getRez();
     return out; 
 }
 

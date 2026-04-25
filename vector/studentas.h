@@ -1,27 +1,26 @@
 #ifndef STUDENTAS_H
 #define STUDENTAS_H
 
+#include "zmogus.h"
 #include <string>
 #include <vector>
 #include <istream>
 #include <ostream>
 static constexpr int maxNdKiekis = 10;
 
-class Studentas{
-    std::string vardas, pavarde;
+class Studentas : public Zmogus {
     std::vector<int> nd;
     int rez;
 
     bool studentoVardoPavardesIvestis(const std::string& eilute);
     void namuDarbuRezultatuIvestis();
     void egzaminoRezultatoIvestis();
-
     void genVardaPavarde();
     void ndRandom(int ndKiekis);
     void egzRandom();
 public:
     // constructors
-    Studentas() : vardas(""), pavarde(""), nd(), rez(0){};
+    Studentas() : Zmogus(), nd(), rez(0){};
     Studentas(std::istream& is, int ndKiekis = 0){ read(is, ndKiekis); };
 
     // copy constructor
@@ -37,14 +36,10 @@ public:
     Studentas& operator=(Studentas&&) noexcept;
 
     // getters
-    const std::string &getVardas() const { return vardas; };
-    const std::string &getPavarde() const { return pavarde; };
     const std::vector<int> &getNd() const { return nd; };
     int getRez() const { return rez; };
 
     // setters
-    void setVardas(std::string v) { vardas = std::move(v); } // to remove
-    void setPavarde(std::string p) { pavarde = std::move(p); } // to remove
     void setNd(std::vector<int> n) { nd = std::move(n);}
     void setRez(int r) { rez = r; }
 
