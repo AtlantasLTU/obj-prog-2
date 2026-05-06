@@ -16,6 +16,15 @@
 #include <windows.h> // windows antraščių failas
 #endif
 
+/**
+ * @brief Apdoroja failą: nuskaito, surūšiuoja, išveda.
+ * @param failoPavadinimas Failo, iš kurio skaityti, pavadinimas.
+ * @param rezervas Rezervavimo dydis konteineriui (jei žinomas).
+ * @param ndKiekis Namų darbų skaičius.
+ * @param medianos Ar naudoti medianą galutiniam pažymiui.
+ * @param rPasirinkimas Rūšiavimo būdas.
+ * @param failas Ar išvesti į failą (true) ar į ekraną (false).
+ */
 void failoApdorojimas(const std::string &failoPavadinimas, int rezervas, int &ndKiekis, bool medianos, int rPasirinkimas, bool failas);
 
 #endif

@@ -1,5 +1,14 @@
 #include "isvestis.h"
 
+/**
+ * @brief Išveda studentų sąrašą į failą arba ekraną.
+ * @tparam Konteineris (list, vector, deque).
+ * @param A Studentų konteineris.
+ * @param medianos Ar naudoti medianą galutiniam pažymiui.
+ * @param failas Jei true – išvesti į failą "rezultatai.txt", kitu atveju – į std::cout.
+ * @param failoPavadinimas Išvesties failo pavadinimas (numatyta "rezultatai.txt").
+ * @param ndKiekis Namų darbų skaičius.
+ */
 template<class Konteineris>
 void isvestis(Konteineris &A, bool medianos, bool failas, const std::string &failoPavadinimas = "rezultatai.txt", int ndKiekis = 0)
 {

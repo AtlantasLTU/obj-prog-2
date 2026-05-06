@@ -2,9 +2,29 @@
 #include "apdorojimas.tpp"
 #include "isvestis.tpp"
 
+/**
+ * @brief Pasirenka skirstymo strategiją.
+ * @tparam Konteineris (list, vector, deque).
+ * @param sPasirinkimas Strategijos numeris (0-3).
+ * @param studentai Studentų konteineris.
+ * @param galvociai Konteineris studentams, kurių galutinis >=5.
+ * @param vargsiukai Konteineris studentams, kurių galutinis <5.
+ * @param medianos Ar naudoti medianą galutiniam pažymiui.
+ * @param ndKiekis Namų darbų skaičius.
+ */
 template <class Konteineris>
 void skirstymoPasirinkimas(int sPasirinkimas, Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai);
 
+/**
+ * @brief Atlieka failo testavimą su duotu konteinerio tipu.
+ * @tparam Konteineris (vector, deque, list).
+ * @param failoPavadinimas Failo pavadinimas.
+ * @param rezervas Rezervavimo dydis.
+ * @param tPasirinkimas Kiek kartų testuoti.
+ * @param sPasirinkimas Skirstymo strategija.
+ * @param ndKiekis Namų darbų skaičius.
+ * @param medianos Ar naudoti medianą galutiniam pažymiui.
+ */
 template <class Konteineris>
 void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPasirinkimas, int sPasirinkimas, int &ndKiekis, bool medianos)
 {
@@ -64,6 +84,10 @@ void failoTestavimas(const std::string &failoPavadinimas, int rezervas, int tPas
     std::cout << "Bendra trukmė: " << skaitymoTrukme + skaiciavimoTrukme + rusiavimoTrukme + skirstymoTrukme + isvedimoTrukme1 + isvedimoTrukme2 << " s\n";
 }
 
+/**
+ * @brief Įgyvendina skirstymo strategijos pasirinkimą.
+ * @tparam Konteineris (vector, deque, list).
+ */
 template <class Konteineris>
 void skirstymoPasirinkimas(int sPasirinkimas, Konteineris &studentai, Konteineris &galvociai, Konteineris &vargsiukai, bool medianos, int ndKiekis = 0)
 {

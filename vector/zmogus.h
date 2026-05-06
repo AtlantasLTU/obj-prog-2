@@ -3,32 +3,64 @@
 
 #include <string>
 
+/**
+ * @class Zmogus
+ * @brief Abstrakti bazinė klasė, turinti vardą ir pavardę.
+ * 
+ * Klasė yra abstrakti dėl virtualaus destruktoriaus.
+ * Skirta paveldėjimui (pvz., Studentas).
+ */
 class Zmogus {
     protected:
-        std::string vardas, pavarde;
+        std::string vardas;   ///< Zmogaus vardas.
+        std::string pavarde;  ///< Zmogaus pavardė.
+        
     public:
+        /** @brief Numatytasis konstruktorius – tuščias vardas ir pavardė. */
         Zmogus() : vardas(""), pavarde("") {};
-        Zmogus(const std::string v,const std::string p) : vardas(std::move(v)), pavarde(std::move(p)) {};
+        
+        /**
+         * @brief Konstruktorius su vardu ir pavarde.
+         * @param v Vardas.
+         * @param p Pavardė.
+         */
+        Zmogus(const std::string v, const std::string p) 
+            : vardas(std::move(v)), pavarde(std::move(p)) {};
 
-        // copy constructor
+        /** @brief Kopijavimo konstruktorius. */
         Zmogus(const Zmogus &kitas);
 
-        // copy assignment operator
+        /** @brief Kopijavimo priskyrimo operatorius. */
         Zmogus& operator=(const Zmogus&);
 
-        // move constructor
+        /** @brief Perkėlimo konstruktorius. */
         Zmogus(Zmogus&&) noexcept;
 
-        // move assignment operator
+        /** @brief Perkėlimo priskyrimo operatorius. */
         Zmogus& operator=(Zmogus&&) noexcept;
 
+        /** @return Vardą (konstantinė nuoroda). */
         const std::string& getVardas() const { return vardas; }
+        
+        /** @return Pavardę (konstantinė nuoroda). */
         const std::string& getPavarde() const { return pavarde; }
 
+        /**
+         * @brief Nustato vardą.
+         * @param v Naujas vardas.
+         */
         void setVardas(std::string v) { vardas = std::move(v); }
-        void setPavarde( std::string p) { pavarde = std::move(p); }
+        
+        /**
+         * @brief Nustato pavardę.
+         * @param p Nauja pavardė.
+         */
+        void setPavarde(std::string p) { pavarde = std::move(p); }
 
-        virtual ~Zmogus() = 0; // destruktorius, kuris abstraktuoja visa zmogaus klase.
+        /**
+         * @brief Virtualus destruktorius – padaro klasę abstrakčia.
+         */
+        virtual ~Zmogus() = 0;
 };
 
 #endif

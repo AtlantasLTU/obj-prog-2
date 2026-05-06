@@ -1,3 +1,11 @@
+/**
+ * @brief Nuskaito studentus iš failo.
+ * @tparam Konteineris (vector, deque, list).
+ * @param failoPavadinimas Failo pavadinimas.
+ * @param ndKiekis Išvestinis namų darbų skaičius (nustatomas iš antraštės).
+ * @param rezervas Preliminarus konteinerio rezervavimo dydis (jei palaikomas).
+ * @return Konteineris su nuskaitytais studentais.
+ */
 template<class Konteineris>
 Konteineris skaitymasIsFailo(const std::string &failoPavadinimas, int &ndKiekis, int rezervas){
     Konteineris studentai;
