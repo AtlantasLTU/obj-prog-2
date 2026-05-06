@@ -41,4 +41,5 @@
 *.dwo
 *.txt
 main
+tests
 .vscode/c_cpp_properties.json
