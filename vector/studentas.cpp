@@ -31,9 +31,6 @@ double Studentas::galutinis(bool medianos, int ndKiekis) const
         const int vidurys = max / 2;
         std::nth_element(ND.begin(), ND.begin() + vidurys, ND.end());
         double med;
-        for(int X : ND){
-            std::cout << X << std::endl;
-        }
         if(max % 2 == 0)
         {
             med = (*std::max_element(ND.begin(), ND.begin() + vidurys) + ND[vidurys]) / 2.0;
