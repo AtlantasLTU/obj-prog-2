@@ -6,7 +6,7 @@
 #include <vector>
 #include <istream>
 #include <ostream>
-static constexpr int maxNdKiekis = 10;
+constexpr int maxNdKiekis = 10;
 
 class Studentas : public Zmogus {
     std::vector<int> nd;
@@ -21,6 +21,7 @@ class Studentas : public Zmogus {
 public:
     // constructors
     Studentas() : Zmogus(), nd(), rez(0){};
+    Studentas(std::string v, std::string p, std::vector<int> n, int r) : Zmogus(std::move(v), std::move(p)), nd(std::move(n)), rez(r) {};
     Studentas(std::istream& is, int ndKiekis = 0){ read(is, ndKiekis); };
 
     // copy constructor

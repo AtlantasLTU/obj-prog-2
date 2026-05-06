@@ -8,6 +8,7 @@ class Zmogus {
         std::string vardas, pavarde;
     public:
         Zmogus() : vardas(""), pavarde("") {};
+        Zmogus(const std::string v,const std::string p) : vardas(std::move(v)), pavarde(std::move(p)) {};
 
         // copy constructor
         Zmogus(const Zmogus &kitas);
@@ -24,8 +25,8 @@ class Zmogus {
         const std::string& getVardas() const { return vardas; }
         const std::string& getPavarde() const { return pavarde; }
 
-        void setVardas(const std::string& v) { vardas = std::move(v); }
-        void setPavarde(const std::string& p) { pavarde = std::move(p); }
+        void setVardas(std::string v) { vardas = std::move(v); }
+        void setPavarde( std::string p) { pavarde = std::move(p); }
 
         virtual ~Zmogus() = 0; // destruktorius, kuris abstraktuoja visa zmogaus klase.
 };

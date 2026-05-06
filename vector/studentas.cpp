@@ -21,34 +21,31 @@ void Studentas::resizeNd(int n, int skaicius)
 
 double Studentas::galutinis(bool medianos, int ndKiekis) const
 {
-    int max;
-    if(ndKiekis != 0)
-    {
-        max = ndKiekis;
-    }
-    else
-    {
-        max = maxNdKiekis;
-    }
+    const int max = (ndKiekis != 0) ? ndKiekis : maxNdKiekis;
+    if(nd.empty()) return 0.6*rez;
     if(medianos)
     {
-        if(nd.empty()) return 0.6*rez;
-
         std::vector<int> ND = nd;
-        ND.resize(max, 0);
+        if(ND.size() < max) ND.resize(max, 0);
         std::sort(ND.begin(), ND.end());
-
-        double med =
-            (max % 2 == 0) // jei lyginis, tai dvieju viduriniu nd vektoriaus nariu mediana paskaiciuoja
-            ? (ND.at(max/2) + ND.at(max/2 - 1)) / 2.0
-            : ND.at(max/2);
-
+        const int vidurys = max / 2;
+        std::nth_element(ND.begin(), ND.begin() + vidurys, ND.end());
+        double med;
+        for(int X : ND){
+            std::cout << X << std::endl;
+        }
+        if(max % 2 == 0)
+        {
+            med = (*std::max_element(ND.begin(), ND.begin() + vidurys) + ND[vidurys]) / 2.0;
+        }
+        else
+        {
+            med = ND[vidurys];
+        }
         return 0.4 * med + 0.6 * rez;
     }
     else
     {
-        if(nd.empty()) return 0.6*rez;
-
         int sum = std::accumulate(nd.begin(), nd.end(), 0);
 
         double vid = (double)sum / max;

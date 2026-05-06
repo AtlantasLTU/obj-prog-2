@@ -1,4 +1,5 @@
 #include "test.h"
+#include <memory>
 
 void testas()
 {
@@ -32,11 +33,7 @@ void testStreamKonstruktorius()
 
 void testCopyKonstruktorius()
 {
-    Studentas A;
-    A.setVardas("A");
-    A.setPavarde("AAA");
-    A.setNd({1,2});
-    A.setRez(10);
+    Studentas A("A", "AAA", {1,2}, 10);
     Studentas B(A);
     bool testas = (B.getVardas()=="A" && B.getPavarde()=="AAA" && B.getNd().at(0) == 1 && B.getNd().at(1) == 2 && B.getRez() == 10);
     testoRezultatas("Copy konstruktorius", testas);
@@ -44,11 +41,7 @@ void testCopyKonstruktorius()
 
 void testCopyAssignmentOperator()
 {
-    Studentas A;
-    A.setVardas("A");
-    A.setPavarde("AAA");
-    A.setNd({1,2});
-    A.setRez(10);
+    Studentas A("A", "AAA", {1,2}, 10);
     Studentas B;
     B = A;
     bool testas = (B.getVardas()=="A" && B.getPavarde()=="AAA" && B.getNd().at(0) == 1 && B.getNd().at(1) == 2 && B.getRez() == 10);
@@ -57,11 +50,7 @@ void testCopyAssignmentOperator()
 
 void testMoveKonstruktorius()
 {
-    Studentas A;
-    A.setVardas("A");
-    A.setPavarde("AAA");
-    A.setNd({1,2});
-    A.setRez(10);
+    Studentas A("A", "AAA", {1,2}, 10);
     Studentas B(std::move(A));
     bool testas = ((B.getVardas()=="A" && B.getPavarde()=="AAA" && B.getNd().at(0) == 1 && B.getNd().at(1) == 2 && B.getRez() == 10) && (A.getVardas().empty() && A.getPavarde().empty() && A.getNd().empty() && A.getRez() == 0));
     testoRezultatas("Move konstruktorius", testas);
@@ -69,11 +58,7 @@ void testMoveKonstruktorius()
 
 void testMoveAssignmentOperator()
 {
-    Studentas A;
-    A.setVardas("A");
-    A.setPavarde("AAA");
-    A.setNd({1,2});
-    A.setRez(10);
+    Studentas A("A", "AAA", {1,2}, 10);
     Studentas B;
     B = std::move(A);
     bool testas = ((B.getVardas()=="A" && B.getPavarde()=="AAA" && B.getNd().at(0) == 1 && B.getNd().at(1) == 2 && B.getRez() == 10) && (A.getVardas().empty() && A.getPavarde().empty() && A.getNd().empty() && A.getRez() == 0));
@@ -82,14 +67,12 @@ void testMoveAssignmentOperator()
 
 void testDestructor()
 {
+    std::weak_ptr<Studentas> weak; // "protinga" rodykle, kuri siuo atveju rodo i scope esancia shared protinga rodykle, taciau weak rodyklei nepriklauso shared A rodykle, t.y. ji nera savininke, tiesiog rodo i ta pati objekta kaip ir shared rodykle, t.y. i Studenta A, ir jei nerodo i nieka galima patikrinti su .expired();
     {
-        Studentas A;
-        A.setVardas("A");
-        A.setPavarde("AAA");
-        A.setNd({1,2});
-        A.setRez(10);
+        std::shared_ptr<Studentas> A = std::make_shared<Studentas>("A", "AAA", std::vector<int>{1,2}, 10);
+        weak = A;
     }
-    testoRezultatas("Destruktorius", true);
+    testoRezultatas("Destruktorius", weak.expired());
 }
 
 void testInputOperator()
@@ -104,11 +87,7 @@ void testInputOperator()
 
 void testOutputOperator()
 {
-    Studentas A;
-    A.setVardas("A");
-    A.setPavarde("AAA");
-    A.setNd({1,2});
-    A.setRez(10);
+    Studentas A("A", "AAA", {1,2}, 10);
     std::ostringstream out;
     out << A;
     std::string isvestis = out.str();
