@@ -1,0 +1,55 @@
+\doxysection{vector/\+random.cpp Failo Nuoroda}
+\hypertarget{random_8cpp}{}\label{random_8cpp}\index{vector/random.cpp@{vector/random.cpp}}
+{\ttfamily \+\#include "{}random.\+h"{}}\newline
+{\ttfamily \+\#include "{}ivestis.\+h"{}}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{classStudentas}{Studentas}} $>$ \doxymbox{\hyperlink{random_8cpp_a5d9e65b8616fd8fdd7c55800d631bcc9}{ivesti\+Studentus\+Random}} (int pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Generuoja studentų sąrašą su atsitiktiniais duomenimis. \end{DoxyCompactList}\item 
+std::\+mt19937 \& \doxymbox{\hyperlink{random_8cpp_afcac47ebf5525355145ccdeaabba0cff}{rng}} ()
+\begin{DoxyCompactList}\small\item\em Grąžina statinį Mersenne Twister atsitiktinių skaičių generatorių. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{random_8cpp_doc-func-members}
+\Hypertarget{random_8cpp_doc-func-members}
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{random_8cpp_a5d9e65b8616fd8fdd7c55800d631bcc9}\index{random.cpp@{random.cpp}!ivestiStudentusRandom@{ivestiStudentusRandom}}
+\index{ivestiStudentusRandom@{ivestiStudentusRandom}!random.cpp@{random.cpp}}
+\doxysubsubsection{\texorpdfstring{ivestiStudentusRandom()}{ivestiStudentusRandom()}}
+{\footnotesize\ttfamily \label{random_8cpp_a5d9e65b8616fd8fdd7c55800d631bcc9} 
+std::\+vector$<$ \doxymbox{\hyperlink{classStudentas}{Studentas}} $>$ ivesti\+Studentus\+Random (\begin{DoxyParamCaption}\item[{int}]{pasirinkimas}{}\end{DoxyParamCaption})}
+
+
+
+Generuoja studentų sąrašą su atsitiktiniais duomenimis. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em pasirinkimas} & 2 – generuoti tik pažymius (vardai/\+pavardės įvedami ranka), 3 – generuoti viską. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Vektorius su sugeneruotais studentais. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{random_8cpp_source}{random.\+cpp}} eilutėje \doxymbox{\hyperlink{random_8cpp_source_l00004}{4}}.
+
+\Hypertarget{random_8cpp_afcac47ebf5525355145ccdeaabba0cff}\index{random.cpp@{random.cpp}!rng@{rng}}
+\index{rng@{rng}!random.cpp@{random.cpp}}
+\doxysubsubsection{\texorpdfstring{rng()}{rng()}}
+{\footnotesize\ttfamily \label{random_8cpp_afcac47ebf5525355145ccdeaabba0cff} 
+std::\+mt19937 \& rng (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Grąžina statinį Mersenne Twister atsitiktinių skaičių generatorių. 
+
+\begin{DoxyReturn}{Gražina}
+Nuoroda į generatorių. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{random_8cpp_source}{random.\+cpp}} eilutėje \doxymbox{\hyperlink{random_8cpp_source_l00040}{40}}.
+

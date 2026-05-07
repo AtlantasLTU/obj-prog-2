@@ -1,0 +1,234 @@
+\doxysection{vector/\+isvestis.cpp Failo Nuoroda}
+\hypertarget{isvestis_8cpp}{}\label{isvestis_8cpp}\index{vector/isvestis.cpp@{vector/isvestis.cpp}}
+{\ttfamily \+\#include "{}isvestis.\+h"{}}\newline
+{\ttfamily \+\#include "{}ivestis.\+h"{}}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_ae83fcdbeb2b6757fc741ae953b633ee1}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Parodo pagrindinį meniu ir grąžina vartotojo pasirinkimą. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_aa511c8e2ab1706401015ba3011997a0c}{rusiavimo\+Pasirinkimas}} ()
+\begin{DoxyCompactList}\small\item\em Vartotojo pasirinkimas, pagal ką rūšiuoti studentus. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_a344271a7bddae48a6099445c8f0035c4}{gauti\+Tipo\+Pasirinkima}} ()
+\begin{DoxyCompactList}\small\item\em Pasirinkimas, kokį konteinerį naudoti testavimui. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_aae21ac605f51ebaf58fed912028624f9}{testavimo\+Pasirinkimas}} ()
+\begin{DoxyCompactList}\small\item\em Kiek kartų kartoti testavimą. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_a04d19c638c9b49c2f2530bafa7645695}{strategijos\+Pasirinkimas}} ()
+\begin{DoxyCompactList}\small\item\em Pasirinkimas, kurią skirstymo strategiją naudoti. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_a8f37934d76532d7a7864ec6bce3778d3}{studentu\+Pasirinkimas}} ()
+\begin{DoxyCompactList}\small\item\em Įvedamas norimas studentų skaičius generavimui. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_af136587497e94498ac51ee96f6560e4d}{nd\+Pasirinkimas}} ()
+\begin{DoxyCompactList}\small\item\em Įvedamas namų darbų rezultatų skaičius generavimui. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{isvestis_8cpp_ac3f0d351efa152d4d3c4ba70f2aee465}{medianos\+Uzklausa}} ()
+\begin{DoxyCompactList}\small\item\em Ar skaičiuoti galutinį pažymį naudojant medianą? \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{isvestis_8cpp_a8db3eedd51092856804fc47d17991638}{failo\+Uzklausa}} ()
+\begin{DoxyCompactList}\small\item\em Ar išvesti rezultatus į failą? \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}{lietuviskos\+Raides}} (const std::\+string \&eilute)
+\begin{DoxyCompactList}\small\item\em Suskaičiuoja, kiek papildomų baitų užima lietuviškos raidės (UTF-\/8). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{isvestis_8cpp_a2238ea78c5ea81cbc6c7d0c91bc02cb3}{failo\+Pasirinkimas}} (int \&rezervas, bool \&egzistuoja, std::\+string \&failo\+Pavadinimas, const std::\+string \&vieta)
+\begin{DoxyCompactList}\small\item\em Leidžia vartotojui pasirinkti failą iš esamų .txt failų programos direktorijoje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{isvestis_8cpp_doc-func-members}
+\Hypertarget{isvestis_8cpp_doc-func-members}
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{isvestis_8cpp_a2238ea78c5ea81cbc6c7d0c91bc02cb3}\index{isvestis.cpp@{isvestis.cpp}!failoPasirinkimas@{failoPasirinkimas}}
+\index{failoPasirinkimas@{failoPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{failoPasirinkimas()}{failoPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a2238ea78c5ea81cbc6c7d0c91bc02cb3} 
+void failo\+Pasirinkimas (\begin{DoxyParamCaption}\item[{int \&}]{rezervas}{, }\item[{bool \&}]{egzistuoja}{, }\item[{std::\+string \&}]{failo\+Pavadinimas}{, }\item[{const std::\+string \&}]{vieta}{ = {\ttfamily "{}."{}}}\end{DoxyParamCaption})}
+
+
+
+Leidžia vartotojui pasirinkti failą iš esamų .txt failų programos direktorijoje. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em rezervas} & Išvedamas rezervavimo dydis (jei failo pavadinime yra skaičius). \\
+\hline
+{\em egzistuoja} & Ar rastas bent vienas tinkamas failas. \\
+\hline
+{\em failo\+Pavadinimas} & Pasirinkto failo pavadinimas. \\
+\hline
+{\em vieta} & direktorija, kurioje numatyta ieškoti failų (numatyta "{}."{}). \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00065}{65}}.
+
+\Hypertarget{isvestis_8cpp_a8db3eedd51092856804fc47d17991638}\index{isvestis.cpp@{isvestis.cpp}!failoUzklausa@{failoUzklausa}}
+\index{failoUzklausa@{failoUzklausa}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{failoUzklausa()}{failoUzklausa()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a8db3eedd51092856804fc47d17991638} 
+bool failo\+Uzklausa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ar išvesti rezultatus į failą? 
+
+\begin{DoxyReturn}{Gražina}
+true – į failą, false – į terminalą. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00044}{44}}.
+
+\Hypertarget{isvestis_8cpp_a344271a7bddae48a6099445c8f0035c4}\index{isvestis.cpp@{isvestis.cpp}!gautiTipoPasirinkima@{gautiTipoPasirinkima}}
+\index{gautiTipoPasirinkima@{gautiTipoPasirinkima}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{gautiTipoPasirinkima()}{gautiTipoPasirinkima()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a344271a7bddae48a6099445c8f0035c4} 
+int gauti\+Tipo\+Pasirinkima (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pasirinkimas, kokį konteinerį naudoti testavimui. 
+
+\begin{DoxyReturn}{Gražina}
+1 – vector, 2 – deque, 3 – list. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00014}{14}}.
+
+\Hypertarget{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}\index{isvestis.cpp@{isvestis.cpp}!lietuviskosRaides@{lietuviskosRaides}}
+\index{lietuviskosRaides@{lietuviskosRaides}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{lietuviskosRaides()}{lietuviskosRaides()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578} 
+int lietuviskos\+Raides (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{eilute}{}\end{DoxyParamCaption})}
+
+
+
+Suskaičiuoja, kiek papildomų baitų užima lietuviškos raidės (UTF-\/8). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em eilutė} & -\/ tekstas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Papildomų baitų skaičius (eilutės ilgis – simbolių skaičius). 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00050}{50}}.
+
+\Hypertarget{isvestis_8cpp_ac3f0d351efa152d4d3c4ba70f2aee465}\index{isvestis.cpp@{isvestis.cpp}!medianosUzklausa@{medianosUzklausa}}
+\index{medianosUzklausa@{medianosUzklausa}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{medianosUzklausa()}{medianosUzklausa()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_ac3f0d351efa152d4d3c4ba70f2aee465} 
+bool medianos\+Uzklausa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ar skaičiuoti galutinį pažymį naudojant medianą? 
+
+\begin{DoxyReturn}{Gražina}
+true – medianą, false – vidurkį. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00039}{39}}.
+
+\Hypertarget{isvestis_8cpp_ae83fcdbeb2b6757fc741ae953b633ee1}\index{isvestis.cpp@{isvestis.cpp}!menu@{menu}}
+\index{menu@{menu}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_ae83fcdbeb2b6757fc741ae953b633ee1} 
+int menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Parodo pagrindinį meniu ir grąžina vartotojo pasirinkimą. 
+
+\begin{DoxyReturn}{Gražina}
+Pasirinkimo numeris (1-\/8). 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00004}{4}}.
+
+\Hypertarget{isvestis_8cpp_af136587497e94498ac51ee96f6560e4d}\index{isvestis.cpp@{isvestis.cpp}!ndPasirinkimas@{ndPasirinkimas}}
+\index{ndPasirinkimas@{ndPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{ndPasirinkimas()}{ndPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_af136587497e94498ac51ee96f6560e4d} 
+int nd\+Pasirinkimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Įvedamas namų darbų rezultatų skaičius generavimui. 
+
+\begin{DoxyReturn}{Gražina}
+nd rezultatų skaičius. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00034}{34}}.
+
+\Hypertarget{isvestis_8cpp_aa511c8e2ab1706401015ba3011997a0c}\index{isvestis.cpp@{isvestis.cpp}!rusiavimoPasirinkimas@{rusiavimoPasirinkimas}}
+\index{rusiavimoPasirinkimas@{rusiavimoPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{rusiavimoPasirinkimas()}{rusiavimoPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_aa511c8e2ab1706401015ba3011997a0c} 
+int rusiavimo\+Pasirinkimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Vartotojo pasirinkimas, pagal ką rūšiuoti studentus. 
+
+\begin{DoxyReturn}{Gražina}
+Pasirinkimas (1-\/6). 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00009}{9}}.
+
+\Hypertarget{isvestis_8cpp_a04d19c638c9b49c2f2530bafa7645695}\index{isvestis.cpp@{isvestis.cpp}!strategijosPasirinkimas@{strategijosPasirinkimas}}
+\index{strategijosPasirinkimas@{strategijosPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{strategijosPasirinkimas()}{strategijosPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a04d19c638c9b49c2f2530bafa7645695} 
+int strategijos\+Pasirinkimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Pasirinkimas, kurią skirstymo strategiją naudoti. 
+
+\begin{DoxyReturn}{Gražina}
+0-\/3. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00024}{24}}.
+
+\Hypertarget{isvestis_8cpp_a8f37934d76532d7a7864ec6bce3778d3}\index{isvestis.cpp@{isvestis.cpp}!studentuPasirinkimas@{studentuPasirinkimas}}
+\index{studentuPasirinkimas@{studentuPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{studentuPasirinkimas()}{studentuPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_a8f37934d76532d7a7864ec6bce3778d3} 
+int studentu\+Pasirinkimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Įvedamas norimas studentų skaičius generavimui. 
+
+\begin{DoxyReturn}{Gražina}
+Studentų skaičius. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00029}{29}}.
+
+\Hypertarget{isvestis_8cpp_aae21ac605f51ebaf58fed912028624f9}\index{isvestis.cpp@{isvestis.cpp}!testavimoPasirinkimas@{testavimoPasirinkimas}}
+\index{testavimoPasirinkimas@{testavimoPasirinkimas}!isvestis.cpp@{isvestis.cpp}}
+\doxysubsubsection{\texorpdfstring{testavimoPasirinkimas()}{testavimoPasirinkimas()}}
+{\footnotesize\ttfamily \label{isvestis_8cpp_aae21ac605f51ebaf58fed912028624f9} 
+int testavimo\+Pasirinkimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kiek kartų kartoti testavimą. 
+
+\begin{DoxyReturn}{Gražina}
+Kartų skaičius. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{isvestis_8cpp_source}{isvestis.\+cpp}} eilutėje \doxymbox{\hyperlink{isvestis_8cpp_source_l00019}{19}}.
+

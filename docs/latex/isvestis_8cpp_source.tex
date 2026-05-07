@@ -1,0 +1,127 @@
+\doxysection{isvestis.\+cpp}
+\hypertarget{isvestis_8cpp_source}{}\label{isvestis_8cpp_source}\index{vector/isvestis.cpp@{vector/isvestis.cpp}}
+\doxymbox{\hyperlink{isvestis_8cpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{isvestis_8h}{isvestis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ivestis_8h}{ivestis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00004}\doxymbox{\hyperlink{isvestis_8cpp_ae83fcdbeb2b6757fc741ae953b633ee1}{00004}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_ae83fcdbeb2b6757fc741ae953b633ee1}{menu}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Pasirinkite\ programos\ eigą:\(\backslash\)n1\ -\/\ ranką,\(\backslash\)n2\ -\/\ generuoti\ tik\ pažymius,\(\backslash\)n3\ -\/\ generuoti\ studentų\ vardus,\ pavardės\ ir\ pažymius,\(\backslash\)n4\ -\/\ skaityti\ studentus\ iš\ failo,\(\backslash\)n5\ -\/\ testavimas\ su\ failais,\(\backslash\)n6\ -\/\ generuoti\ failą,\(\backslash\)n7\ -\/\ testuoti\ klasę\ Studentas,\(\backslash\)n8\ -\/\ baigti\ darbą:\ "{}},\ 1,\ 8);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00009}\doxymbox{\hyperlink{isvestis_8cpp_aa511c8e2ab1706401015ba3011997a0c}{00009}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_aa511c8e2ab1706401015ba3011997a0c}{rusiavimoPasirinkimas}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Pasirinkite\ pagal\ ką\ rūšiuoti:\ \(\backslash\)n1\ -\/\ vardą\ (A-\/>Ž),\(\backslash\)n2\ -\/\ vardą\ (Ž-\/>A),\(\backslash\)n3\ -\/\ pavardę\ (A-\/>Ž),\(\backslash\)n4\ -\/\ pavardę\ (Ž-\/>A),\(\backslash\)n5\ -\/\ galutinį\ pažymį\ didėjančiai\ (1-\/>10),\(\backslash\)n6\ -\/\ galutinį\ pažymį\ mažėjančiai\ (10-\/>1)\(\backslash\)n"{}},\ 1,\ 6);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00014}\doxymbox{\hyperlink{isvestis_8cpp_a344271a7bddae48a6099445c8f0035c4}{00014}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_a344271a7bddae48a6099445c8f0035c4}{gautiTipoPasirinkima}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Kokį\ konteinerio\ tipą\ norite\ testuoti?\(\backslash\)n1\ -\/\ vektorių,\(\backslash\)n2\ -\/\ deque,\(\backslash\)n3\ -\/\ list:\ "{}},\ 1,\ 3);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00019}\doxymbox{\hyperlink{isvestis_8cpp_aae21ac605f51ebaf58fed912028624f9}{00019}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_aae21ac605f51ebaf58fed912028624f9}{testavimoPasirinkimas}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Kiek\ kartų\ testuoti\ failą?\ (1-\/100):"{}},\ 1,\ 100);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00024}\doxymbox{\hyperlink{isvestis_8cpp_a04d19c638c9b49c2f2530bafa7645695}{00024}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_a04d19c638c9b49c2f2530bafa7645695}{strategijosPasirinkimas}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Pagal\ kokią\ strategiją\ testuoti?\(\backslash\)n0\ -\/\ pradiniame\ relize\ naudota\ strategija,\(\backslash\)n1\ -\/\ pirma\ strategija,\(\backslash\)n2\ -\/\ antra\ strategija,\(\backslash\)n3\ -\/\ trečia\ strategija:"{}},\ 0,\ 3);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00029}\doxymbox{\hyperlink{isvestis_8cpp_a8f37934d76532d7a7864ec6bce3778d3}{00029}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_a8f37934d76532d7a7864ec6bce3778d3}{studentuPasirinkimas}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Įveskite\ norimą\ generuoti\ studentų\ kiekį\ (1-\/10000000):"{}},\ 1,\ 10000000);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00034}\doxymbox{\hyperlink{isvestis_8cpp_af136587497e94498ac51ee96f6560e4d}{00034}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_af136587497e94498ac51ee96f6560e4d}{ndPasirinkimas}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Įveskite\ norimą\ generuoti\ namų\ darbų\ rezultatų\ kiekį\ (0-\/10000000):\ "{}},\ 0,\ 10000000);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00039}\doxymbox{\hyperlink{isvestis_8cpp_ac3f0d351efa152d4d3c4ba70f2aee465}{00039}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvestis_8cpp_ac3f0d351efa152d4d3c4ba70f2aee465}{medianosUzklausa}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_a4751505778e2da671709f50539907dc6}{gautiPatvirtinima}}(\textcolor{stringliteral}{"{}Skaičiuoti\ tik\ medianas?\ Jei\ ne,\ tai\ galutinis\ rezultatas\ bus\ skaičiuojamas\ su\ vidurkiu"{}});}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00044}\doxymbox{\hyperlink{isvestis_8cpp_a8db3eedd51092856804fc47d17991638}{00044}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvestis_8cpp_a8db3eedd51092856804fc47d17991638}{failoUzklausa}}()}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00045}00045\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{ivestis_8cpp_a4751505778e2da671709f50539907dc6}{gautiPatvirtinima}}(\textcolor{stringliteral}{"{}Ar\ išvesti\ į\ terminalą?\ Jei\ ne,\ tai\ bus\ išvedama\ į\ rezultatai.txt\ failą"{}});}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00049}00049\ \textcolor{comment}{//\ apskaiciuoti\ kiek\ string\ su\ lietuviskomis\ raidemis\ sudaro\ baitu,\ kadangi\ viena\ lietuviska\ raide\ -\/\ 2\ baitai,\ o\ ne\ 1\ baitas.\ Kitaip\ sakant\ vardas\ Ąžuolas\ turi\ 7\ raides,\ o\ jį\ sudaro\ 8\ baitai,\ o\ setw\ mato\ baitus,\ tai\ jei\ setw(20),\ tai\ jis\ pridės\ 12\ tusciu\ tarpu,\ o\ ne\ 13.}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00050}\doxymbox{\hyperlink{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}{00050}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}{lietuviskosRaides}}(\textcolor{keyword}{const}\ std::string\&\ eilute)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{int}\ simboliuKiekis\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ :\ eilute)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ jei\ baitas\ neprasideda\ su\ 10xxxxxx,\ tai\ naujas\ simbolis}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((c\ \&\ 0xC0)\ !=\ 0x80)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ paprastas\ ASCII\ simbolis\ prasideda\ su\ 0,\ keliu\ baitu\ pvz\ lietuviskos\ raides\ prasideda\ su\ 11\ arba\ 111\ arba\ 1111,\ priklausomai\ nuo\ kodavimo\ |\ 0xC0\ =\ 11000000,\ 0x80\ =\ 10000000.\ \&\ (AND)\ bit'u\ operacija\ atranda\ ar\ c\ prasideda\ su\ 0\ ar\ 1.\ antras,\ trecias\ ar\ ketvirtas\ baitas\ UTF-\/8\ kodavime\ visad\ prasides\ su\ 10xxxxxx}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ simboliuKiekis++;}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ grazinam\ trukstama\ isvesties\ ploti.}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ eilute.length()\ -\/\ simboliuKiekis;}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00065}\doxymbox{\hyperlink{isvestis_8cpp_a2238ea78c5ea81cbc6c7d0c91bc02cb3}{00065}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{isvestis_8cpp_a2238ea78c5ea81cbc6c7d0c91bc02cb3}{failoPasirinkimas}}(\textcolor{keywordtype}{int}\ \&rezervas,\ \textcolor{keywordtype}{bool}\ \&egzistuoja,\ std::string\ \&failoPavadinimas,\ \textcolor{keyword}{const}\ std::string\&\ vieta)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00067}00067\ \ \ \ \ std::vector<std::filesystem::directory\_entry>\ failai;}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00068}00068\ \ \ \ \ std::vector<int>\ rezervai;}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \&failas\ :\ std::filesystem::directory\_iterator(vieta))}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!failas.is\_regular\_file())}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(failas.path().extension()\ !=\ \textcolor{stringliteral}{"{}.txt"{}})}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ std::string\ vardas\ =\ failas.path().filename().string();}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(vardas\ ==\ \textcolor{stringliteral}{"{}rezultatai.txt"{}}\ ||\ vardas\ ==\ \textcolor{stringliteral}{"{}galvociai.txt"{}}\ ||\ vardas\ ==\ \textcolor{stringliteral}{"{}vargsiukai.txt"{}})}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(vardas.find(\textcolor{stringliteral}{"{}studentai"{}},\ 0)\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ skaicius\ =\ vardas.substr(9,\ vardas.size()\ -\/\ 9\ -\/\ 4);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(skaicius.empty()\ ||\ !std::all\_of(skaicius.begin(),\ skaicius.end(),\ [](\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ simbolis)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ std::isdigit(simbolis);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}))}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rezervai.push\_back(0);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rezervai.push\_back(std::stoi(skaicius));}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ rezervai.push\_back(0);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ failai.push\_back(failas);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{if}(failai.empty())}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00106}00106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nerasta\ tekstinių\ failų\ vietoje."{}}\ <<\ vieta\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ egzistuoja\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00109}00109\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00111}00111\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Pasirinkite\ failą:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ failai.size();\ i++)}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00113}00113\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ std::cout\ <<\ (i\ +\ 1)\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ failai.at(i).path().filename().string()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordtype}{int}\ pasirinkimas\ =\ \doxymbox{\hyperlink{ivestis_8cpp_ac2dae081b24e42aea7c22a96791da8b7}{gautiSkaiciu}}(\textcolor{stringliteral}{"{}Įveskite\ failo\ numerį:\ "{}},\ 1,\ failai.size(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00118}00118\ \ \ \ \ failoPavadinimas\ =\ failai.at(pasirinkimas-\/1).path().filename().string();}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00119}00119\ \ \ \ \ rezervas\ =\ rezervai.at(pasirinkimas-\/1);}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8cpp_source_l00121}00121\ \}}
+
+\end{DoxyCode}

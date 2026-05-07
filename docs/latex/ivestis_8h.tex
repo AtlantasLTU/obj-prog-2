@@ -1,0 +1,239 @@
+\doxysection{vector/\+ivestis.h Failo Nuoroda}
+\hypertarget{ivestis_8h}{}\label{ivestis_8h}\index{vector/ivestis.h@{vector/ivestis.h}}
+{\ttfamily \+\#include "{}studentas.\+h"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include "{}ivestis.\+tpp"{}}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{ivestis_8h_a4751505778e2da671709f50539907dc6}{gauti\+Patvirtinima}} (const std::\+string \&pranesimas)
+\begin{DoxyCompactList}\small\item\em Paprašo vartotojo patvirtinimo (y/\+n). \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{classStudentas}{Studentas}} $>$ \doxymbox{\hyperlink{ivestis_8h_a62948c8acdbd060e1d0a69e5f6ffa4ff}{ivesti\+Studentus}} ()
+\begin{DoxyCompactList}\small\item\em Nuskaito studentus iš standartinės įvesties iki EOF. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivestis_8h_a1802ff87db3de36542a7bbd5c01bc05e}{skaitymas}} (\doxymbox{\hyperlink{classStudentas}{Studentas}} \&A)
+\begin{DoxyCompactList}\small\item\em Nuskaito vieną studentą iš srauto (naudojama skaitymui iš failo ar konsolės). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivestis_8h_a30ca566649a7f333eeee192b2d697ec0}{studento\+Vardo\+Pavardes\+Ivestis}} (\doxymbox{\hyperlink{classStudentas}{Studentas}} \&A, const std::\+string \&eilute)
+\begin{DoxyCompactList}\small\item\em Nuskaito vardą ir pavardę iš eilutės. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivestis_8h_acea0bdfdf92c4c8f1bfae8d4417c4f3f}{namu\+Darbu\+Rezultatu\+Ivestis}} (\doxymbox{\hyperlink{classStudentas}{Studentas}} \&A)
+\begin{DoxyCompactList}\small\item\em Nuskaito namų darbų rezultatus (terminale). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivestis_8h_a3a0b6322f595edc84cd562eafcb1ff6d}{egzamino\+Rezultato\+Ivestis}} (\doxymbox{\hyperlink{classStudentas}{Studentas}} \&A)
+\begin{DoxyCompactList}\small\item\em Nuskaito egzamino rezultatą (terminale). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{ivestis_8h_ace87af1e5da0943529cb3d41015da651}{gauti\+Skaiciu}} (const std::\+string \&pranešimas, int min, int max, bool gali\+Buti\+Tuscia=false)
+\begin{DoxyCompactList}\small\item\em Nuskaito sveikąjį skaičių iš konsolės su patikrinimais. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivestis_8h_a206a0d4b4bca0f568b96a9f06f3d3cf6}{ar\+Tik\+Skaicius}} (const std::\+string \&s)
+\begin{DoxyCompactList}\small\item\em Patikrina, ar eilutę sudaro tik skaitmenys ir tarpai. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\Konteineris \doxymbox{\hyperlink{ivestis_8h_a7537bb736b738242a3e2ab111458e0d3}{skaitymas\+Is\+Failo}} (const std::\+string \&failo\+Pavadinimas, int \&nd\+Kiekis, int rezervas)
+\begin{DoxyCompactList}\small\item\em Nuskaito studentus iš failo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivestis_8h_ab2e7e0ba61f62c8417fe2ff0c5f3cae7}{cin\+EOFgaudymas}} ()
+\begin{DoxyCompactList}\small\item\em Apdoroja EOF atvejį cin sraute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{ivestis_8h_doc-func-members}
+\Hypertarget{ivestis_8h_doc-func-members}
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{ivestis_8h_a206a0d4b4bca0f568b96a9f06f3d3cf6}\index{ivestis.h@{ivestis.h}!arTikSkaicius@{arTikSkaicius}}
+\index{arTikSkaicius@{arTikSkaicius}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{arTikSkaicius()}{arTikSkaicius()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a206a0d4b4bca0f568b96a9f06f3d3cf6} 
+bool ar\+Tik\+Skaicius (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Patikrina, ar eilutę sudaro tik skaitmenys ir tarpai. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em s} & Tikrinama eilutė. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+true jei taip. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8cpp_source}{ivestis.\+cpp}} eilutėje \doxymbox{\hyperlink{ivestis_8cpp_source_l00076}{76}}.
+
+\Hypertarget{ivestis_8h_ab2e7e0ba61f62c8417fe2ff0c5f3cae7}\index{ivestis.h@{ivestis.h}!cinEOFgaudymas@{cinEOFgaudymas}}
+\index{cinEOFgaudymas@{cinEOFgaudymas}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{cinEOFgaudymas()}{cinEOFgaudymas()}}
+{\footnotesize\ttfamily \label{ivestis_8h_ab2e7e0ba61f62c8417fe2ff0c5f3cae7} 
+void cin\+EOFgaudymas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Apdoroja EOF atvejį cin sraute. 
+
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8cpp_source}{ivestis.\+cpp}} eilutėje \doxymbox{\hyperlink{ivestis_8cpp_source_l00085}{85}}.
+
+\Hypertarget{ivestis_8h_a3a0b6322f595edc84cd562eafcb1ff6d}\index{ivestis.h@{ivestis.h}!egzaminoRezultatoIvestis@{egzaminoRezultatoIvestis}}
+\index{egzaminoRezultatoIvestis@{egzaminoRezultatoIvestis}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{egzaminoRezultatoIvestis()}{egzaminoRezultatoIvestis()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a3a0b6322f595edc84cd562eafcb1ff6d} 
+void egzamino\+Rezultato\+Ivestis (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classStudentas}{Studentas}} \&}]{A}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito egzamino rezultatą (terminale). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em A} & Studento objektas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ivestis_8h_a4751505778e2da671709f50539907dc6}\index{ivestis.h@{ivestis.h}!gautiPatvirtinima@{gautiPatvirtinima}}
+\index{gautiPatvirtinima@{gautiPatvirtinima}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{gautiPatvirtinima()}{gautiPatvirtinima()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a4751505778e2da671709f50539907dc6} 
+bool gauti\+Patvirtinima (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{pranesimas}{}\end{DoxyParamCaption})}
+
+
+
+Paprašo vartotojo patvirtinimo (y/\+n). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em pranesimas} & Tekstas, rodomas prieš įvedimą. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+true jei \textquotesingle{}y\textquotesingle{}, false jei \textquotesingle{}n\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8cpp_source}{ivestis.\+cpp}} eilutėje \doxymbox{\hyperlink{ivestis_8cpp_source_l00003}{3}}.
+
+\Hypertarget{ivestis_8h_ace87af1e5da0943529cb3d41015da651}\index{ivestis.h@{ivestis.h}!gautiSkaiciu@{gautiSkaiciu}}
+\index{gautiSkaiciu@{gautiSkaiciu}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{gautiSkaiciu()}{gautiSkaiciu()}}
+{\footnotesize\ttfamily \label{ivestis_8h_ace87af1e5da0943529cb3d41015da651} 
+int gauti\+Skaiciu (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{pranešimas}{, }\item[{int}]{min}{, }\item[{int}]{max}{, }\item[{bool}]{gali\+Buti\+Tuscia}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Nuskaito sveikąjį skaičių iš konsolės su patikrinimais. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em pranešimas} & -\/ tekstas, rodomas prieš įvedimą. \\
+\hline
+{\em min} & Mažiausia leistina reikšmė. \\
+\hline
+{\em max} & Didžiausia leistina reikšmė. \\
+\hline
+{\em gali\+Buti\+Tuscia} & Ar galima įvesti tuščią eilutę (grąžina -\/1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Įvestas skaičius. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8cpp_source}{ivestis.\+cpp}} eilutėje \doxymbox{\hyperlink{ivestis_8cpp_source_l00043}{43}}.
+
+\Hypertarget{ivestis_8h_a62948c8acdbd060e1d0a69e5f6ffa4ff}\index{ivestis.h@{ivestis.h}!ivestiStudentus@{ivestiStudentus}}
+\index{ivestiStudentus@{ivestiStudentus}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{ivestiStudentus()}{ivestiStudentus()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a62948c8acdbd060e1d0a69e5f6ffa4ff} 
+std::\+vector$<$ \doxymbox{\hyperlink{classStudentas}{Studentas}} $>$ ivesti\+Studentus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito studentus iš standartinės įvesties iki EOF. 
+
+\begin{DoxyReturn}{Gražina}
+Vektorius su nuskaitytais studentais. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8cpp_source}{ivestis.\+cpp}} eilutėje \doxymbox{\hyperlink{ivestis_8cpp_source_l00029}{29}}.
+
+\Hypertarget{ivestis_8h_acea0bdfdf92c4c8f1bfae8d4417c4f3f}\index{ivestis.h@{ivestis.h}!namuDarbuRezultatuIvestis@{namuDarbuRezultatuIvestis}}
+\index{namuDarbuRezultatuIvestis@{namuDarbuRezultatuIvestis}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{namuDarbuRezultatuIvestis()}{namuDarbuRezultatuIvestis()}}
+{\footnotesize\ttfamily \label{ivestis_8h_acea0bdfdf92c4c8f1bfae8d4417c4f3f} 
+void namu\+Darbu\+Rezultatu\+Ivestis (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classStudentas}{Studentas}} \&}]{A}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito namų darbų rezultatus (terminale). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em A} & Studento objektas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ivestis_8h_a1802ff87db3de36542a7bbd5c01bc05e}\index{ivestis.h@{ivestis.h}!skaitymas@{skaitymas}}
+\index{skaitymas@{skaitymas}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{skaitymas()}{skaitymas()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a1802ff87db3de36542a7bbd5c01bc05e} 
+bool skaitymas (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classStudentas}{Studentas}} \&}]{A}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito vieną studentą iš srauto (naudojama skaitymui iš failo ar konsolės). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em A} & Studento objektas, kur bus įrašyti duomenys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+true jei nuskaitymas sėkmingas. 
+\end{DoxyReturn}
+\Hypertarget{ivestis_8h_a7537bb736b738242a3e2ab111458e0d3}\index{ivestis.h@{ivestis.h}!skaitymasIsFailo@{skaitymasIsFailo}}
+\index{skaitymasIsFailo@{skaitymasIsFailo}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{skaitymasIsFailo()}{skaitymasIsFailo()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a7537bb736b738242a3e2ab111458e0d3} 
+template$<$class Konteineris$>$ \\
+Konteineris skaitymas\+Is\+Failo (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{failo\+Pavadinimas}{, }\item[{int \&}]{nd\+Kiekis}{, }\item[{int}]{rezervas}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito studentus iš failo. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (vector, deque, list). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em failo\+Pavadinimas} & Failo pavadinimas. \\
+\hline
+{\em nd\+Kiekis} & Išvestinis namų darbų skaičius (nustatomas iš antraštės). \\
+\hline
+{\em rezervas} & Preliminarus konteinerio rezervavimo dydis (jei palaikomas). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Konteineris su nuskaitytais studentais. 
+\end{DoxyReturn}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{ivestis_8tpp_source}{ivestis.\+tpp}} eilutėje \doxymbox{\hyperlink{ivestis_8tpp_source_l00010}{10}}.
+
+\Hypertarget{ivestis_8h_a30ca566649a7f333eeee192b2d697ec0}\index{ivestis.h@{ivestis.h}!studentoVardoPavardesIvestis@{studentoVardoPavardesIvestis}}
+\index{studentoVardoPavardesIvestis@{studentoVardoPavardesIvestis}!ivestis.h@{ivestis.h}}
+\doxysubsubsection{\texorpdfstring{studentoVardoPavardesIvestis()}{studentoVardoPavardesIvestis()}}
+{\footnotesize\ttfamily \label{ivestis_8h_a30ca566649a7f333eeee192b2d697ec0} 
+bool studento\+Vardo\+Pavardes\+Ivestis (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classStudentas}{Studentas}} \&}]{A}{, }\item[{const std::\+string \&}]{eilute}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito vardą ir pavardę iš eilutės. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em A} & Studento objektas. \\
+\hline
+{\em eilute} & Eilutė su vardu ir pavarde. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+true jei nuskaityta sėkmingai. 
+\end{DoxyReturn}

@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>obj-prog: vector/isvestis.cpp Failo Nuoroda</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">obj-prog<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">studentų rezultatų skaičiuoklė</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Paieška" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('isvestis_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">isvestis.cpp Failo Nuoroda</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="isvestis_8h_source.html">isvestis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ivestis_8h_source.html">ivestis.h</a>&quot;</code><br />
+</div>
+<p><a href="isvestis_8cpp_source.html">Eiti į šio failo programos kodą.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcijos</h2></td></tr>
+<tr class="memitem:ae83fcdbeb2b6757fc741ae953b633ee1" id="r_ae83fcdbeb2b6757fc741ae953b633ee1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae83fcdbeb2b6757fc741ae953b633ee1">menu</a> ()</td></tr>
+<tr class="memdesc:ae83fcdbeb2b6757fc741ae953b633ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parodo pagrindinį meniu ir grąžina vartotojo pasirinkimą.  <br /></td></tr>
+<tr class="memitem:aa511c8e2ab1706401015ba3011997a0c" id="r_aa511c8e2ab1706401015ba3011997a0c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa511c8e2ab1706401015ba3011997a0c">rusiavimoPasirinkimas</a> ()</td></tr>
+<tr class="memdesc:aa511c8e2ab1706401015ba3011997a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vartotojo pasirinkimas, pagal ką rūšiuoti studentus.  <br /></td></tr>
+<tr class="memitem:a344271a7bddae48a6099445c8f0035c4" id="r_a344271a7bddae48a6099445c8f0035c4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a344271a7bddae48a6099445c8f0035c4">gautiTipoPasirinkima</a> ()</td></tr>
+<tr class="memdesc:a344271a7bddae48a6099445c8f0035c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pasirinkimas, kokį konteinerį naudoti testavimui.  <br /></td></tr>
+<tr class="memitem:aae21ac605f51ebaf58fed912028624f9" id="r_aae21ac605f51ebaf58fed912028624f9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aae21ac605f51ebaf58fed912028624f9">testavimoPasirinkimas</a> ()</td></tr>
+<tr class="memdesc:aae21ac605f51ebaf58fed912028624f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kiek kartų kartoti testavimą.  <br /></td></tr>
+<tr class="memitem:a04d19c638c9b49c2f2530bafa7645695" id="r_a04d19c638c9b49c2f2530bafa7645695"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a04d19c638c9b49c2f2530bafa7645695">strategijosPasirinkimas</a> ()</td></tr>
+<tr class="memdesc:a04d19c638c9b49c2f2530bafa7645695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pasirinkimas, kurią skirstymo strategiją naudoti.  <br /></td></tr>
+<tr class="memitem:a8f37934d76532d7a7864ec6bce3778d3" id="r_a8f37934d76532d7a7864ec6bce3778d3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8f37934d76532d7a7864ec6bce3778d3">studentuPasirinkimas</a> ()</td></tr>
+<tr class="memdesc:a8f37934d76532d7a7864ec6bce3778d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Įvedamas norimas studentų skaičius generavimui.  <br /></td></tr>
+<tr class="memitem:af136587497e94498ac51ee96f6560e4d" id="r_af136587497e94498ac51ee96f6560e4d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af136587497e94498ac51ee96f6560e4d">ndPasirinkimas</a> ()</td></tr>
+<tr class="memdesc:af136587497e94498ac51ee96f6560e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Įvedamas namų darbų rezultatų skaičius generavimui.  <br /></td></tr>
+<tr class="memitem:ac3f0d351efa152d4d3c4ba70f2aee465" id="r_ac3f0d351efa152d4d3c4ba70f2aee465"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac3f0d351efa152d4d3c4ba70f2aee465">medianosUzklausa</a> ()</td></tr>
+<tr class="memdesc:ac3f0d351efa152d4d3c4ba70f2aee465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ar skaičiuoti galutinį pažymį naudojant medianą?  <br /></td></tr>
+<tr class="memitem:a8db3eedd51092856804fc47d17991638" id="r_a8db3eedd51092856804fc47d17991638"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8db3eedd51092856804fc47d17991638">failoUzklausa</a> ()</td></tr>
+<tr class="memdesc:a8db3eedd51092856804fc47d17991638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ar išvesti rezultatus į failą?  <br /></td></tr>
+<tr class="memitem:a92c5e50aa22a4d6fc19c3e1ca6a67578" id="r_a92c5e50aa22a4d6fc19c3e1ca6a67578"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a92c5e50aa22a4d6fc19c3e1ca6a67578">lietuviskosRaides</a> (const std::string &amp;eilute)</td></tr>
+<tr class="memdesc:a92c5e50aa22a4d6fc19c3e1ca6a67578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suskaičiuoja, kiek papildomų baitų užima lietuviškos raidės (UTF-8).  <br /></td></tr>
+<tr class="memitem:a2238ea78c5ea81cbc6c7d0c91bc02cb3" id="r_a2238ea78c5ea81cbc6c7d0c91bc02cb3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2238ea78c5ea81cbc6c7d0c91bc02cb3">failoPasirinkimas</a> (int &amp;rezervas, bool &amp;egzistuoja, std::string &amp;failoPavadinimas, const std::string &amp;vieta)</td></tr>
+<tr class="memdesc:a2238ea78c5ea81cbc6c7d0c91bc02cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leidžia vartotojui pasirinkti failą iš esamų .txt failų programos direktorijoje.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funkcijos Dokumentacija</h2>
+<a id="a2238ea78c5ea81cbc6c7d0c91bc02cb3" name="a2238ea78c5ea81cbc6c7d0c91bc02cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2238ea78c5ea81cbc6c7d0c91bc02cb3">&#9670;&#160;</a></span>failoPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void failoPasirinkimas </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>rezervas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>egzistuoja</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>failoPavadinimas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vieta</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;.&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Leidžia vartotojui pasirinkti failą iš esamų .txt failų programos direktorijoje. </p>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rezervas</td><td>Išvedamas rezervavimo dydis (jei failo pavadinime yra skaičius). </td></tr>
+    <tr><td class="paramname">egzistuoja</td><td>Ar rastas bent vienas tinkamas failas. </td></tr>
+    <tr><td class="paramname">failoPavadinimas</td><td>Pasirinkto failo pavadinimas. </td></tr>
+    <tr><td class="paramname">vieta</td><td>direktorija, kurioje numatyta ieškoti failų (numatyta "."). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00065">65</a>.</p>
+
+</div>
+</div>
+<a id="a8db3eedd51092856804fc47d17991638" name="a8db3eedd51092856804fc47d17991638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db3eedd51092856804fc47d17991638">&#9670;&#160;</a></span>failoUzklausa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool failoUzklausa </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ar išvesti rezultatus į failą? </p>
+<dl class="section return"><dt>Gražina</dt><dd>true – į failą, false – į terminalą. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00044">44</a>.</p>
+
+</div>
+</div>
+<a id="a344271a7bddae48a6099445c8f0035c4" name="a344271a7bddae48a6099445c8f0035c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344271a7bddae48a6099445c8f0035c4">&#9670;&#160;</a></span>gautiTipoPasirinkima()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gautiTipoPasirinkima </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pasirinkimas, kokį konteinerį naudoti testavimui. </p>
+<dl class="section return"><dt>Gražina</dt><dd>1 – vector, 2 – deque, 3 – list. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00014">14</a>.</p>
+
+</div>
+</div>
+<a id="a92c5e50aa22a4d6fc19c3e1ca6a67578" name="a92c5e50aa22a4d6fc19c3e1ca6a67578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c5e50aa22a4d6fc19c3e1ca6a67578">&#9670;&#160;</a></span>lietuviskosRaides()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lietuviskosRaides </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>eilute</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suskaičiuoja, kiek papildomų baitų užima lietuviškos raidės (UTF-8). </p>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eilutė</td><td>- tekstas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Papildomų baitų skaičius (eilutės ilgis – simbolių skaičius). </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00050">50</a>.</p>
+
+</div>
+</div>
+<a id="ac3f0d351efa152d4d3c4ba70f2aee465" name="ac3f0d351efa152d4d3c4ba70f2aee465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f0d351efa152d4d3c4ba70f2aee465">&#9670;&#160;</a></span>medianosUzklausa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool medianosUzklausa </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ar skaičiuoti galutinį pažymį naudojant medianą? </p>
+<dl class="section return"><dt>Gražina</dt><dd>true – medianą, false – vidurkį. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00039">39</a>.</p>
+
+</div>
+</div>
+<a id="ae83fcdbeb2b6757fc741ae953b633ee1" name="ae83fcdbeb2b6757fc741ae953b633ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83fcdbeb2b6757fc741ae953b633ee1">&#9670;&#160;</a></span>menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int menu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parodo pagrindinį meniu ir grąžina vartotojo pasirinkimą. </p>
+<dl class="section return"><dt>Gražina</dt><dd>Pasirinkimo numeris (1-8). </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00004">4</a>.</p>
+
+</div>
+</div>
+<a id="af136587497e94498ac51ee96f6560e4d" name="af136587497e94498ac51ee96f6560e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af136587497e94498ac51ee96f6560e4d">&#9670;&#160;</a></span>ndPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ndPasirinkimas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Įvedamas namų darbų rezultatų skaičius generavimui. </p>
+<dl class="section return"><dt>Gražina</dt><dd>nd rezultatų skaičius. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00034">34</a>.</p>
+
+</div>
+</div>
+<a id="aa511c8e2ab1706401015ba3011997a0c" name="aa511c8e2ab1706401015ba3011997a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa511c8e2ab1706401015ba3011997a0c">&#9670;&#160;</a></span>rusiavimoPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rusiavimoPasirinkimas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vartotojo pasirinkimas, pagal ką rūšiuoti studentus. </p>
+<dl class="section return"><dt>Gražina</dt><dd>Pasirinkimas (1-6). </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00009">9</a>.</p>
+
+</div>
+</div>
+<a id="a04d19c638c9b49c2f2530bafa7645695" name="a04d19c638c9b49c2f2530bafa7645695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d19c638c9b49c2f2530bafa7645695">&#9670;&#160;</a></span>strategijosPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int strategijosPasirinkimas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pasirinkimas, kurią skirstymo strategiją naudoti. </p>
+<dl class="section return"><dt>Gražina</dt><dd>0-3. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00024">24</a>.</p>
+
+</div>
+</div>
+<a id="a8f37934d76532d7a7864ec6bce3778d3" name="a8f37934d76532d7a7864ec6bce3778d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f37934d76532d7a7864ec6bce3778d3">&#9670;&#160;</a></span>studentuPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int studentuPasirinkimas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Įvedamas norimas studentų skaičius generavimui. </p>
+<dl class="section return"><dt>Gražina</dt><dd>Studentų skaičius. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00029">29</a>.</p>
+
+</div>
+</div>
+<a id="aae21ac605f51ebaf58fed912028624f9" name="aae21ac605f51ebaf58fed912028624f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae21ac605f51ebaf58fed912028624f9">&#9670;&#160;</a></span>testavimoPasirinkimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testavimoPasirinkimas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kiek kartų kartoti testavimą. </p>
+<dl class="section return"><dt>Gražina</dt><dd>Kartų skaičius. </dd></dl>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="isvestis_8cpp_source.html">isvestis.cpp</a> eilutėje <a class="el" href="isvestis_8cpp_source.html#l00019">19</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_1fe2e3f40887fbec9fd2493c34e7d145.html">vector</a></li><li class="navelem"><a href="isvestis_8cpp.html">isvestis.cpp</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

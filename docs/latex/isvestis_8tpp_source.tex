@@ -1,0 +1,44 @@
+\doxysection{isvestis.\+tpp}
+\hypertarget{isvestis_8tpp_source}{}\label{isvestis_8tpp_source}\index{vector/isvestis.tpp@{vector/isvestis.tpp}}
+\doxymbox{\hyperlink{isvestis_8tpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{isvestis_8h}{isvestis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00012}00012\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00013}\doxymbox{\hyperlink{isvestis_8tpp_afe788040edb3d597d86f48358e790735}{00013}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{isvestis_8tpp_afe788040edb3d597d86f48358e790735}{isvestis}}(Konteineris\ \&A,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{bool}\ failas,\ \textcolor{keyword}{const}\ std::string\ \&failoPavadinimas\ =\ \textcolor{stringliteral}{"{}rezultatai.txt"{}},\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00015}00015\ \ \ \ \ std::string\ out;}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00017}00017\ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{stringliteral}{"{}Vardas"{}},\ 20,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00018}00018\ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{stringliteral}{"{}Pavardė"{}},\ 21,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00019}00019\ \ \ \ \ out\ +=\ \textcolor{stringliteral}{"{}Galutinis\ (Vid.)\ /\ Galutinis\ (Med.)\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00020}00020\ \ \ \ \ out\ +=\ std::string(75,\ \textcolor{charliteral}{'-\/'})\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&X\ :\ A)}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vardoPlotis\ =\ 20\ +\ \doxymbox{\hyperlink{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}{lietuviskosRaides}}(X.getVardas());}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pavardesPlotis\ =\ 20\ +\ \doxymbox{\hyperlink{isvestis_8cpp_a92c5e50aa22a4d6fc19c3e1ca6a67578}{lietuviskosRaides}}(X.getPavarde());}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(X.getVardas(),\ vardoPlotis,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(X.getPavarde(),\ pavardesPlotis,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (medianos)}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{stringliteral}{"{}x.xx"{}},\ 19,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ out\ +=\ std::format(\textcolor{stringliteral}{"{}\{:.2f\}"{}},\ X.galutinis(medianos,\ ndKiekis));}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ out\ +=\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(std::format(\textcolor{stringliteral}{"{}\{:.2f\}"{}},\ X.galutinis(medianos,\ ndKiekis)),\ 19,\ out);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ out\ +=\ \textcolor{stringliteral}{"{}y.yy\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(failas)\{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00041}00041\ \ \ \ \ \ \ \ \ std::ofstream\ fout(failoPavadinimas);}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00042}00042\ \ \ \ \ \ \ \ \ fout\ <<\ out;}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00043}00043\ \ \ \ \ \ \ \ \ fout.close();}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00044}00044\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00045}00045\ \ \ \ \ \ \ \ \ std::cout\ <<\ out;}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{isvestis_8tpp_source_l00047}00047\ \}}
+
+\end{DoxyCode}

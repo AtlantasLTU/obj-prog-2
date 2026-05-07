@@ -1,0 +1,213 @@
+\doxysection{vector/\+apdorojimas.tpp Failo Nuoroda}
+\hypertarget{apdorojimas_8tpp}{}\label{apdorojimas_8tpp}\index{vector/apdorojimas.tpp@{vector/apdorojimas.tpp}}
+{\ttfamily \+\#include "{}apdorojimas.\+h"{}}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T, class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimas\+Pagal}} (Konteineris \&studentai, T lambda\+Funkcija, bool didejanciai=true)
+\begin{DoxyCompactList}\small\item\em Rūšiuoja konteinerio studentus pagal nurodytą lambda funkciją. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_a46fbb360cce14ff766531ccd98f95de9}{rusiavimas\+Skirstymas}} (Konteineris \&studentai, int r\+Pasirinkimas, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em Rūšiuoja studentus pagal vartotojo pasirinkimą (vardą, pavardę, galutinį pažymį). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_a02104d89d257cd7379cab388eec0d9d6}{skirstymas}} (Konteineris \&studentai, Konteineris \&galvociai, Konteineris \&vargsiukai, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em Skirsto studentus į "{}galvočius"{} (≥5) ir "{}vargšiukus"{} (\texorpdfstring{$<$}{<}5) naudojant judinimą (move). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_ad67179e6c995a5cce0d78a0d6ff8dc96}{skirstymas\+Strat1}} (Konteineris \&studentai, Konteineris \&galvociai, Konteineris \&vargsiukai, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em 1 strategija:\+ skirstymas be perkėlimo (kopijavimas). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_abb0840476510462f1b8c2cdc576782b5}{skirstymas\+Strat2}} (Konteineris \&studentai, Konteineris \&vargsiukai, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em 2 strategija:\+ naudoja std::\+lower\+\_\+bound, kai konteineris jau surūšiuotas. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{apdorojimas_8tpp_a3ed3839e50d856cf89662bd629dd535a}{skirstymas\+Strat3}} (Konteineris \&studentai, Konteineris \&vargsiukai, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em 3 strategija:\+ naudoja std::\+partition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{apdorojimas_8tpp_doc-func-members}
+\Hypertarget{apdorojimas_8tpp_doc-func-members}
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}\index{apdorojimas.tpp@{apdorojimas.tpp}!rusiavimasPagal@{rusiavimasPagal}}
+\index{rusiavimasPagal@{rusiavimasPagal}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{rusiavimasPagal()}{rusiavimasPagal()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb} 
+template$<$class T, class Konteineris$>$ \\
+void rusiavimas\+Pagal (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{T}]{lambda\+Funkcija}{, }\item[{bool}]{didejanciai}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Rūšiuoja konteinerio studentus pagal nurodytą lambda funkciją. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & lambda funkcijos tipas. \\
+\hline
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Studentų konteineris. \\
+\hline
+{\em lambda\+Funkcija} & Funkcija, grąžinanti rūšiavimo būdą. \\
+\hline
+{\em didejanciai} & Jei true – rūšiuoti didėjančiai, kitu atveju – mažėjančiai. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00012}{12}}.
+
+\Hypertarget{apdorojimas_8tpp_a46fbb360cce14ff766531ccd98f95de9}\index{apdorojimas.tpp@{apdorojimas.tpp}!rusiavimasSkirstymas@{rusiavimasSkirstymas}}
+\index{rusiavimasSkirstymas@{rusiavimasSkirstymas}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{rusiavimasSkirstymas()}{rusiavimasSkirstymas()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_a46fbb360cce14ff766531ccd98f95de9} 
+template$<$class Konteineris$>$ \\
+void rusiavimas\+Skirstymas (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{int}]{r\+Pasirinkimas}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Rūšiuoja studentus pagal vartotojo pasirinkimą (vardą, pavardę, galutinį pažymį). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Studentų konteineris. \\
+\hline
+{\em r\+Pasirinkimas} & Rūšiavimo būdas (1-\/6). \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų kiekis (jei žinomas). \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00043}{43}}.
+
+\Hypertarget{apdorojimas_8tpp_a02104d89d257cd7379cab388eec0d9d6}\index{apdorojimas.tpp@{apdorojimas.tpp}!skirstymas@{skirstymas}}
+\index{skirstymas@{skirstymas}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymas()}{skirstymas()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_a02104d89d257cd7379cab388eec0d9d6} 
+template$<$class Konteineris$>$ \\
+void skirstymas (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{galvociai}{, }\item[{Konteineris \&}]{vargsiukai}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Skirsto studentus į "{}galvočius"{} (≥5) ir "{}vargšiukus"{} (\texorpdfstring{$<$}{<}5) naudojant judinimą (move). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Studentų konteineris (ištuštinamas). \\
+\hline
+{\em galvociai} & Konteineris studentams, kurių galutinis \texorpdfstring{$>$}{>}=5. \\
+\hline
+{\em vargsiukai} & Konteineris studentams, kurių galutinis \texorpdfstring{$<$}{<}5. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00068}{68}}.
+
+\Hypertarget{apdorojimas_8tpp_ad67179e6c995a5cce0d78a0d6ff8dc96}\index{apdorojimas.tpp@{apdorojimas.tpp}!skirstymasStrat1@{skirstymasStrat1}}
+\index{skirstymasStrat1@{skirstymasStrat1}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrat1()}{skirstymasStrat1()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_ad67179e6c995a5cce0d78a0d6ff8dc96} 
+template$<$class Konteineris$>$ \\
+void skirstymas\+Strat1 (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{galvociai}{, }\item[{Konteineris \&}]{vargsiukai}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+1 strategija:\+ skirstymas be perkėlimo (kopijavimas). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Studentų konteineris (ištuštinamas). \\
+\hline
+{\em galvociai} & Konteineris studentams, kurių galutinis \texorpdfstring{$>$}{>}=5. \\
+\hline
+{\em vargsiukai} & Konteineris studentams, kurių galutinis \texorpdfstring{$<$}{<}5. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00095}{95}}.
+
+\Hypertarget{apdorojimas_8tpp_abb0840476510462f1b8c2cdc576782b5}\index{apdorojimas.tpp@{apdorojimas.tpp}!skirstymasStrat2@{skirstymasStrat2}}
+\index{skirstymasStrat2@{skirstymasStrat2}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrat2()}{skirstymasStrat2()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_abb0840476510462f1b8c2cdc576782b5} 
+template$<$class Konteineris$>$ \\
+void skirstymas\+Strat2 (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{vargsiukai}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+2 strategija:\+ naudoja std::\+lower\+\_\+bound, kai konteineris jau surūšiuotas. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Surūšiuotas studentų konteineris (išsaugomi "{}galvočiai"{}, kurių galutinis \texorpdfstring{$>$}{>}=5). \\
+\hline
+{\em vargsiukai} & Konteineris studentams, kurių galutinis \texorpdfstring{$<$}{<}5. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00121}{121}}.
+
+\Hypertarget{apdorojimas_8tpp_a3ed3839e50d856cf89662bd629dd535a}\index{apdorojimas.tpp@{apdorojimas.tpp}!skirstymasStrat3@{skirstymasStrat3}}
+\index{skirstymasStrat3@{skirstymasStrat3}!apdorojimas.tpp@{apdorojimas.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrat3()}{skirstymasStrat3()}}
+{\footnotesize\ttfamily \label{apdorojimas_8tpp_a3ed3839e50d856cf89662bd629dd535a} 
+template$<$class Konteineris$>$ \\
+void skirstymas\+Strat3 (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{vargsiukai}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+3 strategija:\+ naudoja std::\+partition. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em studentai} & Surūšiuotas studentų konteineris (išsaugomi "{}galvočiai"{}, kurių galutinis \texorpdfstring{$>$}{>}=5). \\
+\hline
+{\em vargsiukai} & Konteineris studentams, kurių galutinis \texorpdfstring{$<$}{<}5. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{apdorojimas_8tpp_source}{apdorojimas.\+tpp}} eilutėje \doxymbox{\hyperlink{apdorojimas_8tpp_source_l00140}{140}}.
+

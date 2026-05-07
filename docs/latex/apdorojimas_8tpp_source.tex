@@ -1,0 +1,104 @@
+\doxysection{apdorojimas.\+tpp}
+\hypertarget{apdorojimas_8tpp_source}{}\label{apdorojimas_8tpp_source}\index{vector/apdorojimas.tpp@{vector/apdorojimas.tpp}}
+\doxymbox{\hyperlink{apdorojimas_8tpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{apdorojimas_8h}{apdorojimas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00011}00011\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T,\ \textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00012}\doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{00012}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(Konteineris\ \&studentai,\ T\ lambdaFunkcija,\ \textcolor{keywordtype}{bool}\ didejanciai\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}(std::is\_same\_v<Konteineris,\ std::list<Studentas>>)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(didejanciai)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ studentai.sort([lambdaFunkcija](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&B)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lambdaFunkcija(A)\ <\ lambdaFunkcija(B);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ studentai.sort([lambdaFunkcija](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&B)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lambdaFunkcija(A)\ >\ lambdaFunkcija(B);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00024}00024\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00025}00025\ \ \ \ \ \ \ \ \ std::sort(studentai.begin(),\ studentai.end(),}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00026}00026\ \ \ \ \ \ \ \ \ [didejanciai,\ lambdaFunkcija](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&B)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ return\ didejanciai\ ?\ lambdaFunkcija(A)\ <\ lambdaFunkcija(B)\ :\ lambdaFunkcija(A)\ >\ lambdaFunkcija(B);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00030}00030\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00042}00042\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00043}\doxymbox{\hyperlink{apdorojimas_8tpp_a46fbb360cce14ff766531ccd98f95de9}{00043}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_a46fbb360cce14ff766531ccd98f95de9}{rusiavimasSkirstymas}}(Konteineris\ \&studentai,\ \textcolor{keywordtype}{int}\ rPasirinkimas,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{switch}(rPasirinkimas)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classZmogus_acf4a7481cb123bbb30cb82dd50102ebd}{getVardas}}();\});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classZmogus_acf4a7481cb123bbb30cb82dd50102ebd}{getVardas}}();\},\ \textcolor{keyword}{false});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classZmogus_af6fa0216be160cd70589a193709a0b36}{getPavarde}}();\});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classZmogus_af6fa0216be160cd70589a193709a0b36}{getPavarde}}();\},\ \textcolor{keyword}{false});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [medianos,\ ndKiekis](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classStudentas_af01c19deb0d892ce159f999669ab9dbb}{galutinis}}(medianos,\ ndKiekis);\});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ \doxymbox{\hyperlink{apdorojimas_8tpp_a519333966a1ba629d62bc6c4333e06fb}{rusiavimasPagal}}(studentai,\ [medianos,\ ndKiekis](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&studentas)\{\textcolor{keywordflow}{return}\ studentas.\doxymbox{\hyperlink{classStudentas_af01c19deb0d892ce159f999669ab9dbb}{galutinis}}(medianos,\ ndKiekis);\},\ \textcolor{keyword}{false});\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00067}00067\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00068}\doxymbox{\hyperlink{apdorojimas_8tpp_a02104d89d257cd7379cab388eec0d9d6}{00068}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_a02104d89d257cd7379cab388eec0d9d6}{skirstymas}}(Konteineris\ \&studentai,\ Konteineris\ \&galvociai,\ Konteineris\ \&vargsiukai,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{for}(\doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A\ :\ studentai)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(A.galutinis(medianos,\ ndKiekis)<5)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ vargsiukai.push\_back(std::move(A));}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ galvociai.push\_back(std::move(A));}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00078}00078\ \ \ \ \ studentai.clear();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}(!(std::is\_same\_v<Konteineris,\ std::list<Studentas>>))\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00080}00080\ \ \ \ \ \ \ \ \ vargsiukai.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00081}00081\ \ \ \ \ \ \ \ \ galvociai.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00094}00094\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00095}\doxymbox{\hyperlink{apdorojimas_8tpp_ad67179e6c995a5cce0d78a0d6ff8dc96}{00095}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_ad67179e6c995a5cce0d78a0d6ff8dc96}{skirstymasStrat1}}(Konteineris\ \&studentai,\ Konteineris\ \&galvociai,\ Konteineris\ \&vargsiukai,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{for}(\doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A\ :\ studentai)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(A.galutinis(medianos,\ ndKiekis)<5)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ vargsiukai.push\_back(A);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ galvociai.push\_back(A);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00105}00105\ \ \ \ \ studentai.clear();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}(!(std::is\_same\_v<Konteineris,\ std::list<Studentas>>))\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00107}00107\ \ \ \ \ \ \ \ \ vargsiukai.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00108}00108\ \ \ \ \ \ \ \ \ galvociai.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00120}00120\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00121}\doxymbox{\hyperlink{apdorojimas_8tpp_abb0840476510462f1b8c2cdc576782b5}{00121}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_abb0840476510462f1b8c2cdc576782b5}{skirstymasStrat2}}(Konteineris\ \&studentai,\ Konteineris\ \&vargsiukai,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::lower\_bound(studentai.begin(),\ studentai.end(),\ 5,\ [medianos,\ ndKiekis](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ \&A,\ \textcolor{keywordtype}{int}\ skaic)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ return\ A.galutinis(medianos,\ ndKiekis)\ <\ skaic;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00126}00126\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00127}00127\ \ \ \ \ vargsiukai.insert(vargsiukai.end(),\ std::make\_move\_iterator(studentai.begin()),\ std::make\_move\_iterator(it));}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00128}00128\ \ \ \ \ studentai.erase(studentai.begin(),\ it);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00139}00139\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00140}\doxymbox{\hyperlink{apdorojimas_8tpp_a3ed3839e50d856cf89662bd629dd535a}{00140}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8tpp_a3ed3839e50d856cf89662bd629dd535a}{skirstymasStrat3}}(Konteineris\ \&studentai,\ Konteineris\ \&vargsiukai,\ \textcolor{keywordtype}{bool}\ medianos,\ \textcolor{keywordtype}{int}\ ndKiekis\ =\ 0)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::partition(studentai.begin(),\ studentai.end(),}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00142}00142\ \ \ \ \ \ \ \ \ [medianos,\ ndKiekis](\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStudentas}{Studentas}}\&\ A)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ return\ A.galutinis(medianos,\ ndKiekis)\ >=\ 5;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00145}00145\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00146}00146\ \ \ \ \ vargsiukai.insert(vargsiukai.end(),\ std::make\_move\_iterator(it),\ std::make\_move\_iterator(studentai.end()));}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00147}00147\ \ \ \ \ studentai.erase(it,\ studentai.end());}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8tpp_source_l00148}00148\ \}}
+
+\end{DoxyCode}

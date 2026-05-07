@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>obj-prog: vector/test.h išeities tekstas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">obj-prog<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">studentų rezultatų skaičiuoklė</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Paieška" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test_8h.html">Eiti į šio failo dokumentaciją.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TEST_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TEST_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="studentas_8h.html">studentas.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="ivestis_8h.html">ivestis.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a3ec92fd06cd5803bf3f1ad974518a284">testas</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a0c3233f9fbb2763cdc60c4ac2d19a733">testoRezultatas</a>(<span class="keyword">const</span> std::string&amp; testName, <span class="keywordtype">bool</span> passed);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#aaf0452bde4f91169785f5ab6d6f9b8a8">testDefaultKonstruktorius</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a58bf21352677d8d47e71221e3faeb09d">testStreamKonstruktorius</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#afb237300a368d1d2915a3d0af16bc2a6">testCopyKonstruktorius</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a156c27f16281edc12e53cefbed664710">testCopyAssignmentOperator</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a0c46e71fc8b79a539e4ff62189780265">testMoveKonstruktorius</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a3bc568c02360ed5081e2bb10aaa83237">testMoveAssignmentOperator</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#ae15faf94d7075fbc483be7046c189ab7">testDestructor</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#a85318460e3d26067375beafe4e273aa2">testInputOperator</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="test_8h.html#afe4a257a0eabcab2eb08b80965ca4be2">testOutputOperator</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aivestis_8h_html"><div class="ttname"><a href="ivestis_8h.html">ivestis.h</a></div></div>
+<div class="ttc" id="astudentas_8h_html"><div class="ttname"><a href="studentas_8h.html">studentas.h</a></div></div>
+<div class="ttc" id="atest_8h_html_a0c3233f9fbb2763cdc60c4ac2d19a733"><div class="ttname"><a href="test_8h.html#a0c3233f9fbb2763cdc60c4ac2d19a733">testoRezultatas</a></div><div class="ttdeci">void testoRezultatas(const std::string &amp;testName, bool passed)</div><div class="ttdoc">Išveda testo rezultatą į konsolę.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00098">test.cpp:98</a></div></div>
+<div class="ttc" id="atest_8h_html_a0c46e71fc8b79a539e4ff62189780265"><div class="ttname"><a href="test_8h.html#a0c46e71fc8b79a539e4ff62189780265">testMoveKonstruktorius</a></div><div class="ttdeci">void testMoveKonstruktorius()</div><div class="ttdoc">Testuoja perkėlimo konstruktorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00051">test.cpp:51</a></div></div>
+<div class="ttc" id="atest_8h_html_a156c27f16281edc12e53cefbed664710"><div class="ttname"><a href="test_8h.html#a156c27f16281edc12e53cefbed664710">testCopyAssignmentOperator</a></div><div class="ttdeci">void testCopyAssignmentOperator()</div><div class="ttdoc">Testuoja kopijavimo priskyrimo operatorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00042">test.cpp:42</a></div></div>
+<div class="ttc" id="atest_8h_html_a3bc568c02360ed5081e2bb10aaa83237"><div class="ttname"><a href="test_8h.html#a3bc568c02360ed5081e2bb10aaa83237">testMoveAssignmentOperator</a></div><div class="ttdeci">void testMoveAssignmentOperator()</div><div class="ttdoc">Testuoja perkėlimo priskyrimo operatorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00059">test.cpp:59</a></div></div>
+<div class="ttc" id="atest_8h_html_a3ec92fd06cd5803bf3f1ad974518a284"><div class="ttname"><a href="test_8h.html#a3ec92fd06cd5803bf3f1ad974518a284">testas</a></div><div class="ttdeci">void testas()</div><div class="ttdoc">Paleidžia visus Studentas klasės testus.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00004">test.cpp:4</a></div></div>
+<div class="ttc" id="atest_8h_html_a58bf21352677d8d47e71221e3faeb09d"><div class="ttname"><a href="test_8h.html#a58bf21352677d8d47e71221e3faeb09d">testStreamKonstruktorius</a></div><div class="ttdeci">void testStreamKonstruktorius()</div><div class="ttdoc">Testuoja konstruktorių su srautu.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00025">test.cpp:25</a></div></div>
+<div class="ttc" id="atest_8h_html_a85318460e3d26067375beafe4e273aa2"><div class="ttname"><a href="test_8h.html#a85318460e3d26067375beafe4e273aa2">testInputOperator</a></div><div class="ttdeci">void testInputOperator()</div><div class="ttdoc">Testuoja įvesties operatorių (&gt;&gt;).</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00078">test.cpp:78</a></div></div>
+<div class="ttc" id="atest_8h_html_aaf0452bde4f91169785f5ab6d6f9b8a8"><div class="ttname"><a href="test_8h.html#aaf0452bde4f91169785f5ab6d6f9b8a8">testDefaultKonstruktorius</a></div><div class="ttdeci">void testDefaultKonstruktorius()</div><div class="ttdoc">Testuoja numatytąjį konstruktorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00018">test.cpp:18</a></div></div>
+<div class="ttc" id="atest_8h_html_ae15faf94d7075fbc483be7046c189ab7"><div class="ttname"><a href="test_8h.html#ae15faf94d7075fbc483be7046c189ab7">testDestructor</a></div><div class="ttdeci">void testDestructor()</div><div class="ttdoc">Testuoja destruktorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00068">test.cpp:68</a></div></div>
+<div class="ttc" id="atest_8h_html_afb237300a368d1d2915a3d0af16bc2a6"><div class="ttname"><a href="test_8h.html#afb237300a368d1d2915a3d0af16bc2a6">testCopyKonstruktorius</a></div><div class="ttdeci">void testCopyKonstruktorius()</div><div class="ttdoc">Testuoja kopijavimo konstruktorių.</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00034">test.cpp:34</a></div></div>
+<div class="ttc" id="atest_8h_html_afe4a257a0eabcab2eb08b80965ca4be2"><div class="ttname"><a href="test_8h.html#afe4a257a0eabcab2eb08b80965ca4be2">testOutputOperator</a></div><div class="ttdeci">void testOutputOperator()</div><div class="ttdoc">Testuoja išvesties operatorių (&lt;&lt;).</div><div class="ttdef"><b>Definition</b> <a href="test_8cpp_source.html#l00088">test.cpp:88</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_1fe2e3f40887fbec9fd2493c34e7d145.html">vector</a></li><li class="navelem"><a href="test_8h.html">test.h</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

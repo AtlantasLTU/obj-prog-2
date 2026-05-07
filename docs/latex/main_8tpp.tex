@@ -1,0 +1,105 @@
+\doxysection{vector/\+main.tpp Failo Nuoroda}
+\hypertarget{main_8tpp}{}\label{main_8tpp}\index{vector/main.tpp@{vector/main.tpp}}
+{\ttfamily \+\#include "{}main.\+h"{}}\newline
+{\ttfamily \+\#include "{}apdorojimas.\+tpp"{}}\newline
+{\ttfamily \+\#include "{}isvestis.\+tpp"{}}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{main_8tpp_aa9be161d45341cb7669fca2c504677fe}{skirstymo\+Pasirinkimas}} (int s\+Pasirinkimas, Konteineris \&studentai, Konteineris \&galvociai, Konteineris \&vargsiukai)
+\begin{DoxyCompactList}\small\item\em Pasirenka skirstymo strategiją. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{main_8tpp_a6f7850540f3e71520e1b234a1786b166}{failo\+Testavimas}} (const std::\+string \&failo\+Pavadinimas, int rezervas, int t\+Pasirinkimas, int s\+Pasirinkimas, int \&nd\+Kiekis, bool medianos)
+\begin{DoxyCompactList}\small\item\em Atlieka failo testavimą su duotu konteinerio tipu. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Konteineris$>$ }\\void \doxymbox{\hyperlink{main_8tpp_ab25a35b217ead961a26218f36e83ab3f}{skirstymo\+Pasirinkimas}} (int s\+Pasirinkimas, Konteineris \&studentai, Konteineris \&galvociai, Konteineris \&vargsiukai, bool medianos, int nd\+Kiekis=0)
+\begin{DoxyCompactList}\small\item\em Įgyvendina skirstymo strategijos pasirinkimą. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{main_8tpp_doc-func-members}
+\Hypertarget{main_8tpp_doc-func-members}
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{main_8tpp_a6f7850540f3e71520e1b234a1786b166}\index{main.tpp@{main.tpp}!failoTestavimas@{failoTestavimas}}
+\index{failoTestavimas@{failoTestavimas}!main.tpp@{main.tpp}}
+\doxysubsubsection{\texorpdfstring{failoTestavimas()}{failoTestavimas()}}
+{\footnotesize\ttfamily \label{main_8tpp_a6f7850540f3e71520e1b234a1786b166} 
+template$<$class Konteineris$>$ \\
+void failo\+Testavimas (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{failo\+Pavadinimas}{, }\item[{int}]{rezervas}{, }\item[{int}]{t\+Pasirinkimas}{, }\item[{int}]{s\+Pasirinkimas}{, }\item[{int \&}]{nd\+Kiekis}{, }\item[{bool}]{medianos}{}\end{DoxyParamCaption})}
+
+
+
+Atlieka failo testavimą su duotu konteinerio tipu. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (vector, deque, list). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em failo\+Pavadinimas} & Failo pavadinimas. \\
+\hline
+{\em rezervas} & Rezervavimo dydis. \\
+\hline
+{\em t\+Pasirinkimas} & Kiek kartų testuoti. \\
+\hline
+{\em s\+Pasirinkimas} & Skirstymo strategija. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{main_8tpp_source}{main.\+tpp}} eilutėje \doxymbox{\hyperlink{main_8tpp_source_l00029}{29}}.
+
+\Hypertarget{main_8tpp_aa9be161d45341cb7669fca2c504677fe}\index{main.tpp@{main.tpp}!skirstymoPasirinkimas@{skirstymoPasirinkimas}}
+\index{skirstymoPasirinkimas@{skirstymoPasirinkimas}!main.tpp@{main.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymoPasirinkimas()}{skirstymoPasirinkimas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{main_8tpp_aa9be161d45341cb7669fca2c504677fe} 
+template$<$class Konteineris$>$ \\
+void skirstymo\+Pasirinkimas (\begin{DoxyParamCaption}\item[{int}]{s\+Pasirinkimas}{, }\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{galvociai}{, }\item[{Konteineris \&}]{vargsiukai}{}\end{DoxyParamCaption})}
+
+
+
+Pasirenka skirstymo strategiją. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (list, vector, deque). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em s\+Pasirinkimas} & Strategijos numeris (0-\/3). \\
+\hline
+{\em studentai} & Studentų konteineris. \\
+\hline
+{\em galvociai} & Konteineris studentams, kurių galutinis \texorpdfstring{$>$}{>}=5. \\
+\hline
+{\em vargsiukai} & Konteineris studentams, kurių galutinis \texorpdfstring{$<$}{<}5. \\
+\hline
+{\em medianos} & Ar naudoti medianą galutiniam pažymiui. \\
+\hline
+{\em nd\+Kiekis} & Namų darbų skaičius. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8tpp_ab25a35b217ead961a26218f36e83ab3f}\index{main.tpp@{main.tpp}!skirstymoPasirinkimas@{skirstymoPasirinkimas}}
+\index{skirstymoPasirinkimas@{skirstymoPasirinkimas}!main.tpp@{main.tpp}}
+\doxysubsubsection{\texorpdfstring{skirstymoPasirinkimas()}{skirstymoPasirinkimas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{main_8tpp_ab25a35b217ead961a26218f36e83ab3f} 
+template$<$class Konteineris$>$ \\
+void skirstymo\+Pasirinkimas (\begin{DoxyParamCaption}\item[{int}]{s\+Pasirinkimas}{, }\item[{Konteineris \&}]{studentai}{, }\item[{Konteineris \&}]{galvociai}{, }\item[{Konteineris \&}]{vargsiukai}{, }\item[{bool}]{medianos}{, }\item[{int}]{nd\+Kiekis}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Įgyvendina skirstymo strategijos pasirinkimą. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Konteineris} & (vector, deque, list). \\
+\hline
+\end{DoxyTemplParams}
+
+
+Apibrėžimas failo \doxymbox{\hyperlink{main_8tpp_source}{main.\+tpp}} eilutėje \doxymbox{\hyperlink{main_8tpp_source_l00092}{92}}.
+

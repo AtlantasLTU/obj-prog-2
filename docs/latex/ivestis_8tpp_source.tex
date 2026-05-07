@@ -1,0 +1,37 @@
+\doxysection{ivestis.\+tpp}
+\hypertarget{ivestis_8tpp_source}{}\label{ivestis_8tpp_source}\index{vector/ivestis.tpp@{vector/ivestis.tpp}}
+\doxymbox{\hyperlink{ivestis_8tpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00009}00009\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Konteineris>}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00010}\doxymbox{\hyperlink{ivestis_8h_a7537bb736b738242a3e2ab111458e0d3}{00010}}\ Konteineris\ \doxymbox{\hyperlink{ivestis_8tpp_a7537bb736b738242a3e2ab111458e0d3}{skaitymasIsFailo}}(\textcolor{keyword}{const}\ std::string\ \&failoPavadinimas,\ \textcolor{keywordtype}{int}\ \&ndKiekis,\ \textcolor{keywordtype}{int}\ rezervas)\{}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00011}00011\ \ \ \ \ Konteineris\ studentai;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}(\textcolor{keyword}{requires}(Konteineris\ konteineris)\{konteineris.reserve(0);\})}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00013}00013\ \ \ \ \ \ \ \ \ studentai.reserve(rezervas);}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00014}00014\ \ \ \ \ std::string\ eil,\ t;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00016}00016\ \ \ \ \ std::ifstream\ open\_f(failoPavadinimas);}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!open\_f.is\_open())\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Klaida:\ failas\ \(\backslash\)"{}"{}}\ +\ failoPavadinimas\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ nerastas."{}});}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}(!std::getline(open\_f,\ eil))\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Klaida:\ failas\ tuščias\ arba\ netinkantis"{}});}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00020}00020\ \ \ \ \ std::istringstream\ antraste(eil);}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00021}00021\ \ \ \ \ antraste\ >>\ t\ >>\ t;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{while}(antraste\ >>\ t)\{}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\ ==\ \textcolor{stringliteral}{"{}Egz."{}}\ ||\ t\ ==\ \textcolor{stringliteral}{"{}Egzaminas"{}})\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00024}00024\ \ \ \ \ \ \ \ \ ndKiekis++;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00027}00027\ \ \ \ \ std::string\ vardas,\ pavarde;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ paz;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ studentas;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!(studentas.\doxymbox{\hyperlink{classStudentas_a24d20dcc31d098080f6faf6d5a8d4379}{readStudentStream}}(open\_f,\ ndKiekis)))\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00033}00033\ \ \ \ \ \ \ \ \ studentai.push\_back(std::move(studentas));}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00036}00036\ \ \ \ \ open\_f.close();}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ studentai;}
+\DoxyCodeLine{\Hypertarget{ivestis_8tpp_source_l00038}00038\ \}}
+
+\end{DoxyCode}

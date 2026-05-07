@@ -1,0 +1,39 @@
+\doxysection{apdorojimas.\+cpp}
+\hypertarget{apdorojimas_8cpp_source}{}\label{apdorojimas_8cpp_source}\index{vector/apdorojimas.cpp@{vector/apdorojimas.cpp}}
+\doxymbox{\hyperlink{apdorojimas_8cpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{apdorojimas_8h}{apdorojimas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00003}\doxymbox{\hyperlink{apdorojimas_8cpp_acaef23d883bee3e85414cf0993204e38}{00003}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8cpp_acaef23d883bee3e85414cf0993204e38}{failoGeneravimas}}(\textcolor{keywordtype}{int}\ studentuKiekis,\ \textcolor{keywordtype}{int}\ ndKiekis)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00005}00005\ \ \ \ \ std::string\ out;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00006}00006\ \ \ \ \ out.reserve(studentuKiekis*100\textcolor{comment}{/*\ 46+(ndKiekis*10)+studentuKiekis*(43+ndKiekis*10)\ */});}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00007}00007\ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{stringliteral}{"{}Vardas"{}},\ 20,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00008}00008\ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{stringliteral}{"{}Pavardė"{}},\ 21,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ ndKiekis;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(std::format(\textcolor{stringliteral}{"{}ND\{\}"{}},\ i),\ 10,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00012}00012\ \ \ \ \ out\ +=\ \textcolor{stringliteral}{"{}Egz.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ studentuKiekis;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStudentas}{Studentas}}\ A;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ A.\doxymbox{\hyperlink{classStudentas_a697523a369820d791166c4fe0b057af5}{readRandom}}(ndKiekis);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(A.\doxymbox{\hyperlink{classZmogus_acf4a7481cb123bbb30cb82dd50102ebd}{getVardas}}(),\ 20,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(A.\doxymbox{\hyperlink{classZmogus_af6fa0216be160cd70589a193709a0b36}{getPavarde}}(),\ 20,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ ndKiekis;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(std::to\_string(A.\doxymbox{\hyperlink{classStudentas_a61b219cdeb4b697c2fa547f4b1a256c2}{getNd}}().at(j)),\ 10,\ out);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ out\ +=\ std::to\_string(A.\doxymbox{\hyperlink{classStudentas_adcf500594aed346af5f72316c0fd7980}{getRez}}())+\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00023}00023\ \ \ \ \ std::string\ failoPavadinimas\ =\ std::string(\textcolor{stringliteral}{"{}studentai"{}})\ +\ std::to\_string(studentuKiekis)\ +\ \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00024}00024\ \ \ \ \ std::ofstream\ fout(failoPavadinimas);}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00025}00025\ \ \ \ \ fout\ <<\ out;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00026}00026\ \ \ \ \ fout.close();}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00029}\doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{00029}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{apdorojimas_8cpp_a6dfb9abfb552245c671cd1797ceeda53}{setw}}(\textcolor{keyword}{const}\ std::string\ \&tekstas,\ \textcolor{keywordtype}{int}\ plotis,\ std::string\&\ out)\ \{}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00030}00030\ \ \ \ \ out\ +=\ tekstas;}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (tekstas.size()\ <\ plotis)}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ out.append(plotis\ -\/\ tekstas.size(),\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{apdorojimas_8cpp_source_l00033}00033\ \};}
+
+\end{DoxyCode}

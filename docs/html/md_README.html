@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>obj-prog: Programos naudojimas:</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">obj-prog<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">studentų rezultatų skaičiuoklė</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Paieška" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('md_README.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Programos naudojimas: </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Reikalavimai:</h1>
+<p>C++ kompiliatorius su C++20 palaikymu. Unix OS (Linux arba MacOS) arba WSL (Windows Subsystem for Linux) git</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Programos diegimas:</h1>
+<p>git clone <a href="https://github.com/AtlantasLTU/obj-prog-2.git">https://github.com/AtlantasLTU/obj-prog-2.git</a> cd ./obj-prog-2 make ./main</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Programos naudojimas:</h1>
+<p>Funkcijos: Pasirinktina išvestis į failą arba į terminalą. Pasirinktinas galutinio rezultato skaičiavimas, remiantis vidurkiu arba mediana. Direktorijoje esančių .txt failų pasirinkimas. Rūšiavimas pasirinktu būdu.</p>
+<p>1 parinktis - rankinis duomenų įvedimas, studento vardo, pavardės, namų darbų rezultatų, egzamino rezultato, jų apdorojimas ir išvedimas. 2 parinktis - pusiau rankinis duomenų įvedimas, studento vardo, pavardės, rezultatų generavimas, duomenų apdorojimas ir išvedimas. 3 parinktis - automatinis studentų vardų, pavardžių, rezultatų generavimas, jų apdorojimas ir išvedimas. 4 parinktis - skaitymas iš pasirinktino failo, rūšiavimas pasirinktinu būdu, duomenų apdorojimas ir išvedimas. 5 parinktis - testavimas su failais, pasirenkamas failas, konteinerio tipas, strategija, testų skaičius, failai apdorojami (nuskaitymas, skaičiavimas, rūšiavimas, skirstymas) ir išvedami testo rezultatai į terminalą. 6 parinktis - studentų failų generavimas, studentų, namų darbų kiekio pasirinkimas ir išvedimas į studentai*.txt failą. 7 parinktis - studento klasės testavimas. 8 parinktis - programos nutraukimas.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+v1.5:</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Pridėta bazinė klasė Zmogus:</h2>
+<p>Klasė studentas dabar išvestinė. Studento klasė paveldi iš žmogaus klasės vardą bei pavardę, metodus susijusiais su šiais kintamaisiais Klasė abstrakti dėl virtualaus destruktoriaus.</p>
+<ul>
+<li>Studento klasės rule of five atnaujintas, kad veiktų su bazinė klase.</li>
+<li>Rule of five taip pat realizuotas Zmogaus klasėje.</li>
+<li>Išlaikytas v1.2 testas bei funkcionalumas.</li>
+</ul>
+<p>Bandant sukurti Zmogaus tipo objektą, išmeta klaidą, kad klasė abstrakti: <img src="https://github.com/user-attachments/assets/cd726a52-8453-4cb9-9fb5-59956c8ef023" alt="image" width="693" height="157" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+v1.2:</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Realizuota "Rule of Five":</h2>
+<p>Destruktorius Copy konstruktorius Copy assignment operatorius Move konstruktorius Move assignment operatorius</p><ul>
+<li>Realizuotas įvesties ir išvesties operatorių perdengimas.</li>
+<li>Sukurtas studento klasės metodų testas.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Įvesties operatoriaus naudojimas (veikia su visais įvedimo srautais):</h3>
+<p>Kai naudojamas <span class="tt">operator&gt;&gt;</span> su failo srautu, pažymių kiekis nustatomas automatiškai: visi skaičiai po vardo ir pavardės laikomi namų darbų pažymiais, o pats paskutinis – egzamino balu. </p><pre class="fragment">Studentas A;
+std::istringstream iss("Jonas Jonaitis 1 2 10");
+iss &gt;&gt; A; // įvestis iš įvedimo srauto.
+std::cin &gt;&gt; A; // įvestis iš konsolės.
+</pre> <h3 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Išvesties operatoriaus naudojimas (veikia su visais išvesties srautais):</h3>
+<p><a class="el" href="classStudentas.html" title="Klasė, sukurianti studento objektą su pažymiais.">Studentas</a> A; std::cout &lt;&lt; A; // išvestis į ekraną std::ostringstream out; out &lt;&lt; A; // išvesties srauto kūrimas std::ofstream fout("studentai.txt"); fout &lt;&lt; A; // išveda į failą</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Studento klasės metodų testas.</h2>
+<p><img src="https://github.com/user-attachments/assets/9ad64abe-d4fd-44e7-9725-a9ab8de91735" alt="image" width="488" height="654" class="inline"/></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+v1.1 testavimas:</h1>
+<ul>
+<li>Kompiuterio, su kuriuo testuota parametrai: <img src="https://github.com/user-attachments/assets/76e93716-e1de-4997-9bfb-c176b49e5e1e" alt="image" width="1000" height="606" class="inline"/></li>
+</ul>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Skirstymo strategijos:</h4>
+<ul>
+<li>0 - pradiniame relize naudota strategija. Dviejų konteinerių "vargšiukų" ir "kietiakų" sukūrimas, duomenys perkeliami iš "studentai" konteinerio su std::move.</li>
+<li>1 strategija: Bendro studentai konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) į du naujus to paties tipo konteinerius: "vargšiukų" ir "kietiakų". Dviejų konteinerių "vargšiukų" ir "kietiakų" sukūrimas, duomenys kopijuojami iš "studentai" konteinerio.</li>
+<li>2 strategija: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "vargšiukai". Studentai konteineris išrūšiuotas, randamas iteratorius rodantis į pirmąjį galvočių, viskas iki iteratoriaus perkeliama į vargšiukų konteinerį ir ištrinama iš studentai konteinerio. Iteratoriui rasti naudojamas lower_bound metodas</li>
+<li>3 strategija: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant greičiausiai veikianti 1 arba 2 strategiją įtraukiant į ją "efektyvius" darbo su konteineriais metodus. Šioje strategijoje naudojamas partition metodas.</li>
+</ul>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+Atlikta programos veikimo greičio (spartos) analizė:</h4>
+<ul>
+<li>lyginamas v1.0 struct tipas su v1.1 realizuota klasė.</li>
+<li>lyginamas vienas konteinerius - vektorius, su pačia greičiausia dalijimo strategija - 2.</li>
+<li>100000 ir 1000000 studentų failai.</li>
+<li>lyginamos kompiliatoriaus optimizavimo vėliavėlės (-Ofast, -O1, -O2, -O3).</li>
+</ul>
+<p>Testuota tik naudojant terminalą, visos kitos pašalinės programos testavimo metu buvo išjungtos bei įrenginys "performance" režime. Visi testavimo atvejai testuoti 10 kartų, su medianų skaičiavimu.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Spartos palyginimas:</h2>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+100000 studentų:</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Tipas  </th><th class="markdownTableHeadNone">Optimizavimo vėliavėlė  </th><th class="markdownTableHeadNone">Bendras veikimo laikas (s)  </th><th class="markdownTableHeadNone">Failo dydis (KB)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-Ofast  </td><td class="markdownTableBodyNone">1.65366 s  </td><td class="markdownTableBodyNone">349.3 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-Ofast  </td><td class="markdownTableBodyNone">4.66815 s  </td><td class="markdownTableBodyNone">332.7 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O1  </td><td class="markdownTableBodyNone">2.43243 s  </td><td class="markdownTableBodyNone">300.6 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O1  </td><td class="markdownTableBodyNone">7.11753 s  </td><td class="markdownTableBodyNone">293.2 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O2  </td><td class="markdownTableBodyNone">2.24629 s  </td><td class="markdownTableBodyNone">314.2 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O2  </td><td class="markdownTableBodyNone">6.3197 s  </td><td class="markdownTableBodyNone">308.2 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O3  </td><td class="markdownTableBodyNone">2.1662 s  </td><td class="markdownTableBodyNone">349.5 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O3  </td><td class="markdownTableBodyNone">5.94076 s  </td><td class="markdownTableBodyNone">332.7 KB  </td></tr>
+</table>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+1000000 studentų:</h4>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Tipas  </th><th class="markdownTableHeadNone">Optimizavimo vėliavėlė  </th><th class="markdownTableHeadNone">Bendras veikimo laikas (s)  </th><th class="markdownTableHeadNone">Failo dydis (KB)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-Ofast  </td><td class="markdownTableBodyNone">18.4434 s  </td><td class="markdownTableBodyNone">349.3 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-Ofast  </td><td class="markdownTableBodyNone">66.1051 s  </td><td class="markdownTableBodyNone">332.7 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O1  </td><td class="markdownTableBodyNone">20.5588 s  </td><td class="markdownTableBodyNone">300.6 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O1  </td><td class="markdownTableBodyNone">79.2437 s  </td><td class="markdownTableBodyNone">293.2 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O2  </td><td class="markdownTableBodyNone">18.8914 s  </td><td class="markdownTableBodyNone">314.2 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O2  </td><td class="markdownTableBodyNone">72.3371 s  </td><td class="markdownTableBodyNone">308.2 KB  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">struct  </td><td class="markdownTableBodyNone">-O3  </td><td class="markdownTableBodyNone">18.0112 s  </td><td class="markdownTableBodyNone">349.5 KB  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">class  </td><td class="markdownTableBodyNone">-O3  </td><td class="markdownTableBodyNone">55.4038 s  </td><td class="markdownTableBodyNone">332.7 KB  </td></tr>
+</table>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Pastebėjimai</h3>
+<p>Ta pati programa perdaryta su class tipu lėtesnė ~3x negu su struct, priklausomai nuo optimzacijos vėliavėlės. Taip yra todėl, kad class tipo programoje, galutinis balas skaičiuojamas, kai jo prireikia ir nėra saugojamas atminty, tai sutaupo atminties, tačiau padidina skaičiavimų laiką. Pagrinde -Ofast vėliavėlė greičiausia, tačiau esant milijonui studentų -O3 aplenkia -Ofast vėliavėlė, galbūt -O3 geriau suoptimizuoja failų skaitymą. Mažiausią failą sukuria -O1 vėliavėlė, o didžiausią -O3. Taip yra todėl, kad -O1 skirtas balansui tarp greičio ir dydžio, o -O3 skirtas našesniam programos veikimui.</p>
+<p>Nors struct tipas greitesnis, tačiau class tipas saugesnis ir plečiant programos apimtį, enkapsuliacija, paveldamumas ir kitos class tipo ypatybės padaro jį naudingesniu.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+Relizų aprašas</h1>
+<p>v1.2 </p><pre class="fragment">Realizuota rule of five.
+Realizuotas įvesties išvesties operatorių perkrovimas.
+Sukurtas studento klasės metodų testas.
+</pre><p> v1.1 </p><pre class="fragment">Studento struktūra paversta į klasę
+Implementuoti get'eriai, set'eriai, konstruktoriai bei destruktorius.
+Kintamieji privatūs, pasiekiami tik per studento klasės metodus.
+Refaktorintas ir patobulintas random vardų, pavardžių generatorius.
+Nebesaugojamas kintamasis galutinio rezultato, jis skaičiuojamas tik, kai jo prireikia.
+</pre><p>v1.0 </p><pre class="fragment">Padidintas template naudojimas, siekiant ištestuoti vector, deque ir list konteinerius.
+Pridėtos trys studentų skirstymo į „vargšiukus“ (vidurkis &lt; 5.0) ir „kietiakus“ strategijos:
+    1 strategija: Bendro konteinerio skaidymas į du naujus, kopijuojant į vargsiukai ir galvočiai konteinerius.
+    2 strategija: „Vargšiukų“ perkėlimas į naują konteinerį, juos ištrinant iš studentų konteinerio.
+    3 strategija: Optimizuotas skirstymas naudojant efektyvius algoritmus (std::partition).
+
+Paruoštas pilnas README.md su tyrimo rezultatais, lentelėmis ir naudojimo instrukcija.
+Pridėtas Makefile lengvam programos kompiliavimui.
+</pre><p>v0.4 </p><pre class="fragment">Patobulinta išvestis.
+Pridėtas skirstymas į "galvočius" ir "vargšiukus".
+Pridėtas failų generavimas.
+Pridėtas failų pasirinkimas.
+</pre><p>v0.3 </p><pre class="fragment">Kodas išskirstytas į daugiau dalių (.h ir .cpp failus).
+Įterptas try-catch blokas failų egzistavimo tikrinimui, kitų klaidų gaudymui.
+Panaudotas template rūšiavimo funkcijoje, kodo skaitomumui pagerinti.
+Refaktoriaus metu apšvarintas main.cpp failas.
+</pre><p>v0.2 </p><pre class="fragment">Pridėtas duomenų nuskaitymas iš išorinių failų.
+Pridėti testavimo atvejai.
+</pre><p>v0.1 </p><pre class="fragment">Pridėtas automatinis pažymių generavimas.
+Įdiegtas „sąžiningas“ vidurkio skaičiavimas (atsižvelgiant į trūkstamus namų darbus).
+Patobulintas įvesties valdymas (apsauga nuo neteisingos įvesties).
+</pre><p>V.pradinė </p><pre class="fragment">Sukurta studento struktūra.
+Realizuotas vidurkio ir medianos skaičiavimas.
+Pradinė įvesties apsauga.
+Hardcoded reikšmės testavimui.
+</pre> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
