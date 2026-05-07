@@ -7,10 +7,22 @@
   ## Programos diegimas:
     git clone https://github.com/AtlantasLTU/obj-prog-2.git
     cd ./obj-prog-2
-    make
+  
+  ### main (paprastas programos veikimas):
+    make main
     ./main
+
+  ### test (programos testas):
+    make test
+
+    Jei jau sukompiliuotas tests paleidimo failas, tai tiesiog:
+    ./tests
+
+  ### clean (ištrina main bei tests sukompiliuotas programas):
+    make clean
     
   ## Programos naudojimas:
+  ### main:
     Funkcijos:
       Pasirinktina išvestis į failą arba į terminalą.
       Pasirinktinas galutinio rezultato skaičiavimas, remiantis vidurkiu arba mediana.
@@ -25,6 +37,21 @@
     6 parinktis - studentų failų generavimas, studentų, namų darbų kiekio pasirinkimas ir išvedimas į studentai*.txt failą.
     7 parinktis - studento klasės testavimas.
     8 parinktis - programos nutraukimas.
+
+  ### test:
+      `make test` paleidžia testus, kurie ištestuoja rule of five, pasitelkiant gtest bibliotekos įrankiais.
+
+# v2.0:
+  ## Pridėta doxygen sukurta dokumentacija:
+      Aprašyti metodai bei klasės.
+      Sukurtos nuorodos tarp metodų.
+
+  ## Pridėtas unit testing:
+      Naudojamas gtest
+      Automatinis studento klasės rule of five testavimas
+
+<img width="709" height="797" alt="image" src="https://github.com/user-attachments/assets/aa687d6d-d466-4190-a34f-a915b069e7c7" />
+
 
 # v1.5:
   ## Pridėta bazinė klasė Zmogus:
@@ -120,6 +147,11 @@ Visi testavimo atvejai testuoti 10 kartų, su medianų skaičiavimu.
   Nors struct tipas greitesnis, tačiau class tipas saugesnis ir plečiant programos apimtį, enkapsuliacija, paveldamumas ir kitos class tipo ypatybės padaro jį naudingesniu.
 
 # Relizų aprašas
+v1.5
+
+    Sukurta bazinė klasė Zmogus.
+    Klasė Studentas paveldi vardą bei pavardę iš klasės Zmogus.
+    Kodas pritaikytas darbui su bazine klase.
 v1.2
 
     Realizuota rule of five.
